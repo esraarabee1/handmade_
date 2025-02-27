@@ -1,0 +1,13 @@
+export const GET_ALL_CATEGORY = "GET_ALL_CATEGORY";
+export const GET_ERROR = "GET_ERROR";
+export const GET_ALL_BRAND = "GET_ALL_BRAND";
+export const GET_ALL_PRODUCT = "GET_ALL_PRODUCT";
+export const CREATE_NEW_USER = "CREATE_NEW_USER";
+export const LOGIN_USER = "LOGIN_USER";
+export const GET_ALL_USERS = "GET_ALL_USERS";
+export const ADD_TO_WISH = "ADD_TO_WISH";
+export const REMOVE_FROM_WISHLIST = "REMOVE_FROM_WISHLIST";
+export const GET_ALL_FAV = "GET_ALL_FAV";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const GET_ALL_USER_CART = "GET_ALL_USER_CART";
+export const GET_ON_PRODUCT = "GET_ON_PRODUCT";

@@ -1,0 +1,32 @@
+import { combineReducers } from "redux";
+import counterReducer from "./counterReducer";
+import categoryReducer from "./categoryReducer";
+import brandReducer from "./brandReducer";
+import productReducer from "./productReducer";
+import authReducer from "./authReducer";
+import authloginReducer from "./authloginReducer";
+import allUsersReducer from "./userReducer";
+import addtowishReducer from "./wishlis/addwishReducer";
+import removewishReducer from "./../reducers/wishlis/removewishReducer";
+import getfavReducer from "./../reducers/wishlis/getfavReducer";
+import cartReducer from "./../reducers/cart/cartReducer";
+import getcartReducer from "./../reducers/cart/getallcartReducer";
+import productdetailsReducer from "./../reducers/products/getoneprodReducer";
+
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  allCategory: categoryReducer,
+  allBrands: brandReducer,
+  allProducts: productReducer,
+  authReducer: authReducer,
+  authloginReducer: authloginReducer,
+  allUsersReducer: allUsersReducer,
+  addtowishReducer: addtowishReducer,
+  removewishReducer: removewishReducer,
+  getfavReducer: getfavReducer,
+  cartReducer: cartReducer,
+  getcartReducer: getcartReducer,
+  productdetailsReducer: productdetailsReducer,
+});
+
+export default rootReducer;
