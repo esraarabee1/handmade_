@@ -21,7 +21,7 @@ export const getAllProducts = () => async (dispatch) => {
 //get all category
 export const getOneProduct = (id) => async (dispatch) => {
   try {
-    const response = await getData(`/api/Products/id?id=${id}`);
+    const response = await getData(`/api/Products/GetById?id=${id}`);
     console.log("PRODUCT", response.data);
     dispatch({
       type: GET_ON_PRODUCT,
