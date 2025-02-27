@@ -14,7 +14,7 @@ const HomeCategory = () => {
         btntitle="View All"
         pathText="/allcategory"
       />
-      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="my-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {loading === false ? (
           category.data ? (
             category.data.slice(0, 4).map((item) => {
