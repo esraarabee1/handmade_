@@ -6,8 +6,15 @@ import deliverytruck from "../../images/deliverytruck.svg";
 import Discount from "../../images/Discount.svg";
 import logoherfetyone from "../../images/logoherfetyone.svg";
 import lodoherfety from "../../images/lodoherfety.svg";
+import NavbarSearchHook from "../../Hook/products/viewsearchProd-hook";
 
 const Navbar = () => {
+  const [OnChange, searchWord] = NavbarSearchHook();
+
+  let word = "";
+  if (localStorage.getItem("searchWord") != null)
+    word = localStorage.getItem("searchWord");
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [user, setUser] = useState("");
@@ -55,6 +62,8 @@ const Navbar = () => {
             className="hidden md:flex flex-grow mx-2 px-3 py-1 border rounded-full shadow-sm text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
             type="text"
             placeholder="Search essentials, groceries and more..."
+            value={word}
+            onChange={OnChange}
           />
 
           {/* Icons + Hamburger Menu */}
@@ -159,6 +168,8 @@ const Navbar = () => {
               className="w-11/12 mx-auto block px-3 py-1 border rounded-full shadow-sm text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
               type="text"
               placeholder="Search..."
+              value={word}
+              onChange={OnChange}
             />
             <div className="flex flex-col items-center space-y-2 mt-2">
               <a

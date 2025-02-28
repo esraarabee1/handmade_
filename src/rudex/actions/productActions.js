@@ -18,6 +18,22 @@ export const getAllProducts = () => async (dispatch) => {
   }
 };
 
+export const getAllProductsSearch = (queryString) => async (dispatch) => {
+  try {
+    const response = await getData(`/api/Products?${queryString}`);
+    console.log("PRODUCTS feom search", response.data);
+    dispatch({
+      type: GET_ALL_PRODUCT,
+      payload: response,
+    });
+  } catch (e) {
+    dispatch({
+      type: GET_ERROR,
+      payload: "Error " + e,
+    });
+  }
+};
+
 //get all category
 export const getOneProduct = (id) => async (dispatch) => {
   try {
