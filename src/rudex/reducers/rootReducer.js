@@ -13,7 +13,8 @@ import cartReducer from "./../reducers/cart/cartReducer";
 import getcartReducer from "./../reducers/cart/getallcartReducer";
 import productdetailsReducer from "./../reducers/products/getoneprodReducer";
 import addprodReducer from "./../reducers/products/addprodReducer";
-
+import viewitemsReducer from "./../reducers/admin/viewitemsReducer";
+import viewvendorsdataReducer from "./../reducers/admin/viewvendorsReducer";
 const rootReducer = combineReducers({
   counter: counterReducer,
   allCategory: categoryReducer,
@@ -29,6 +30,8 @@ const rootReducer = combineReducers({
   getcartReducer: getcartReducer,
   productdetailsReducer: productdetailsReducer,
   addprodReducer: addprodReducer,
+  viewitemsReducer: viewitemsReducer,
+  viewvendorsdataReducer: viewvendorsdataReducer,
 });
 
 export default rootReducer;

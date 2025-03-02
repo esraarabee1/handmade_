@@ -12,3 +12,5 @@ export const ADD_TO_CART = "ADD_TO_CART";
 export const GET_ALL_USER_CART = "GET_ALL_USER_CART";
 export const GET_ON_PRODUCT = "GET_ON_PRODUCT";
 export const ADD_PRODUCT = "ADD_PRODUCT";
+export const GET_All_ITEMS = "GET_All_ITEMS";
+export const GET_All_VENDORS = "GET_All_VENDORS";
