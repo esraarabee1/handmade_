@@ -1,6 +1,5 @@
 import React from "react";
 import AdminSideBar from "../../components/Admin/AdminSideBar";
-import ProductDesc from "../../components/Admin/ProductDesc";
 import UploadProd from "../../components/Admin/UploadProd";
 
 const AdminAddProdPage = () => {
@@ -12,13 +11,8 @@ const AdminAddProdPage = () => {
       </div>
 
       {/* المحتوى الرئيسي */}
-      <div className="flex flex-1 gap-4">
-        <div className="w-2/3 bg-white pt-7 pb-7 pl-[33px] pr-[33px] rounded-lg shadow-md">
-          <ProductDesc />
-        </div>
-        <div className="w-1/3 bg-white p-6 rounded-lg shadow-md">
-          <UploadProd />
-        </div>
+      <div className="flex flex-1 ">
+        <UploadProd />
       </div>
     </div>
   );
