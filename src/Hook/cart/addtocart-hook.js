@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 import { addToCart } from "../../rudex/actions/cartActions";
+import { getOneProduct } from "../../rudex/actions/productActions";
+import useOneProduct from "../products/getoneprod-hook";
 
 const AddToCartHook = (cartId) => {
+  const { id } = useParams();
+  const { productdetails } = useOneProduct(id);
+
   const dispatch = useDispatch();
 
   const [loading, setLoading] = useState(true);
@@ -13,7 +19,7 @@ const AddToCartHook = (cartId) => {
     await dispatch(
       addToCart({
         CartId: 1,
-        Price: 100,
+        Price: productdetails.price,
         ProductId: 23,
         Quantity: 1,
       })

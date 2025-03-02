@@ -6,7 +6,7 @@ const AdminDashboard = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* الشريط الجانبي */}
-      <div className="w-80 bg-white shadow-lg">
+      <div className=" bg-white shadow-lg">
         <AdminSideBar />
       </div>
 

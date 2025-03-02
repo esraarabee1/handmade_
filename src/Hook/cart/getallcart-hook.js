@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserCart } from "../../rudex/actions/cartActions";
+import { getOneProduct } from "../../rudex/actions/productActions";
 
 const GetAllUserCartHook = () => {
   const dispatch = useDispatch();
+  const { productdetails } = getOneProduct();
   const [loading, setLoading] = useState(true);
   const [cartItems, setCartItems] = useState([]);
 
@@ -20,6 +22,7 @@ const GetAllUserCartHook = () => {
     if (loading === false) {
       if (res) {
         console.log("get cart", res);
+
         setCartItems(res);
       }
     }

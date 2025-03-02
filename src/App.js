@@ -4,6 +4,8 @@ import NavBarLogin from "./components/Uitily/NavBarLogin";
 import Footer from "./components/Uitily/Footer";
 import "./App.css";
 import UserProfilePage from "./pages/User/UserProfilePage";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import AdminaddProdPage from "./pages/Admin/Adminaddprodpage";
 
 // تحميل الصفحات بشكل كسول
 const HomePage = React.lazy(() => import("./pages/Home/HomePage"));
@@ -54,6 +56,8 @@ function App() {
               path="/user/UserTrackOrderPage"
               element={<UserTrackOrderPage />}
             />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/addproduct" element={<AdminaddProdPage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

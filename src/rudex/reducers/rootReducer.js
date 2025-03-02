@@ -12,6 +12,7 @@ import getfavReducer from "./../reducers/wishlis/getfavReducer";
 import cartReducer from "./../reducers/cart/cartReducer";
 import getcartReducer from "./../reducers/cart/getallcartReducer";
 import productdetailsReducer from "./../reducers/products/getoneprodReducer";
+import addprodReducer from "./../reducers/products/addprodReducer";
 
 const rootReducer = combineReducers({
   counter: counterReducer,
@@ -27,6 +28,7 @@ const rootReducer = combineReducers({
   cartReducer: cartReducer,
   getcartReducer: getcartReducer,
   productdetailsReducer: productdetailsReducer,
+  addprodReducer: addprodReducer,
 });
 
 export default rootReducer;

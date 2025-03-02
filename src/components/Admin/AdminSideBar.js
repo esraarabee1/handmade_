@@ -24,7 +24,7 @@ const AdminSideBar = () => {
   ];
 
   return (
-    <div className="h-screen w-80 bg-white text-black  flex flex-col shadow-lg">
+    <div className="h-screen w-[296px] bg-white text-black  flex flex-col shadow-lg">
       {/* Logo */}
       <div className="p-6 text-2xl font-bold text-center bg-blue-600 text-white">
         Admin Panel

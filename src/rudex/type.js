@@ -11,3 +11,4 @@ export const GET_ALL_FAV = "GET_ALL_FAV";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const GET_ALL_USER_CART = "GET_ALL_USER_CART";
 export const GET_ON_PRODUCT = "GET_ON_PRODUCT";
+export const ADD_PRODUCT = "ADD_PRODUCT";

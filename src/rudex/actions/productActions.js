@@ -1,5 +1,33 @@
-import { GET_ALL_PRODUCT, GET_ON_PRODUCT, GET_ERROR } from "../type";
+import {
+  GET_ALL_PRODUCT,
+  GET_ON_PRODUCT,
+  GET_ERROR,
+  ADD_PRODUCT,
+} from "../type";
 import { getData } from "../../Hooks/useGetData";
+import {
+  useInsertData,
+  useInsertDataWithImage,
+} from "../../Hooks/useInsertData";
+
+//create products with pagination
+export const createProduct = (data) => async (dispatch) => {
+  try {
+    const response = await useInsertData("/api/Products", data);
+    console.log("PRODUCTS from add action", response);
+
+    dispatch({
+      type: ADD_PRODUCT,
+      payload: response,
+      loading: true,
+    });
+  } catch (e) {
+    dispatch({
+      type: GET_ERROR,
+      payload: "Error  " + e,
+    });
+  }
+};
 
 //get all category
 export const getAllProducts = () => async (dispatch) => {
