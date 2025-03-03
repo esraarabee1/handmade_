@@ -10,7 +10,7 @@ const InventoryTable = () => {
         <thead>
           <tr className="border-b ">
             <th className="p-3 text-left"></th>
-            <th className="p-3 text-left">Product Image</th>
+            <th className="p-3 text-left "></th>
             <th className="p-3 text-left">Product Name</th>
             <th className="p-3 text-left">Category</th>
             <th className="p-3 text-left">Unit Price</th>
