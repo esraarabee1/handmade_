@@ -6,7 +6,7 @@ import DashHeader from "../../components/Admin/DashHeader";
 
 const Adminviewvendors = () => {
   return (
-    <div className="flex gap-4 p-6 bg-gray-100 min-h-screen">
+    <div className="flex gap-4  min-h-screen bg-gray-100">
       {/* الشريط الجانبي */}
       <div className="bg-white shadow-lg rounded-lg">
         <AdminSideBar />

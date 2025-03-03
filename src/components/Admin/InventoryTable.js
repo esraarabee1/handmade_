@@ -32,7 +32,7 @@ const InventoryTable = () => {
                 />
               </td>
               <td className="p-3 flex items-center gap-2">{item.name}</td>
-              <td className="p-3">{item.category}</td>
+              <td className="p-3">{item.category ? "HandMade" : "HandMade"}</td>
               <td className="p-3">{item.price}</td>
               <td className="p-3">{item.qty}</td>
               <td className="p-3">{item.offerPrice}</td>

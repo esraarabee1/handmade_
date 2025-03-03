@@ -67,10 +67,11 @@ const AdminSideBar = () => {
       <div className="p-6">
         <button
           onClick={() => alert("Logging out...")} // استبدل هذا بوظيفة تسجيل الخروج الحقيقية
-          className="flex items-center gap-4 w-full px-6 py-4 text-lg rounded-md bg-red-500 text-white hover:bg-red-600 transition-all"
+          className="flex items-center gap-4 w-full px-6 py-4 text-lg rounded-md bg-white text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white transition-all"
         >
-          <MdLogout className="text-2xl" /> {/* أيقونة تسجيل الخروج */}
-          <span>Logout</span>
+          <MdLogout className="text-2xl text-blue-500 group-hover:text-white" />{" "}
+          {/* أيقونة تسجيل الخروج */}
+          <span className="group-hover:text-white">Logout</span>
         </button>
       </div>
     </div>

@@ -1,13 +1,21 @@
 import React from "react";
 import { FaUsers } from "react-icons/fa"; // أيقونة المستخدمين
-
+import { useNavigate } from "react-router-dom";
 const VendorStatus = () => {
+  const navigate = useNavigate();
   return (
     <div className="rounded-lg ">
       {/* العنوان */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold">Trader Summary</h2>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            console.log("Button Clicked!");
+            navigate("/addvendors");
+          }}
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+        >
           + Add a New Trader
         </button>
       </div>

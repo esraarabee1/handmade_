@@ -3,7 +3,7 @@ import categorytw from "../../images/categorytw.png"; // تأكد من مسار 
 
 const RecentOrderCard = () => {
   return (
-    <div className=" p-4 rounded-lg w-full max-w-7xl h-30 mx-auto flex items-center ">
+    <div className="  rounded-lg w-full max-w-7xl h-30 mx-auto flex items-center ">
       <div className="flex gap-4 w-full">
         <div>
           <img

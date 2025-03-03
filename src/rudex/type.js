@@ -14,3 +14,4 @@ export const GET_ON_PRODUCT = "GET_ON_PRODUCT";
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const GET_All_ITEMS = "GET_All_ITEMS";
 export const GET_All_VENDORS = "GET_All_VENDORS";
+export const ADD_TO_VENDORS = "ADD_TO_VENDORS";

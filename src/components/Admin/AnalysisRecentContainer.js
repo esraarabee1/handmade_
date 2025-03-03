@@ -4,7 +4,7 @@ import AdminContainerAnalysis from "./AdminContainerAnalysis";
 
 const AnalysisRecentContainer = () => {
   return (
-    <div className="flex flex-col md:flex-row p-4">
+    <div className="flex flex-col md:flex-row pl-4">
       <div className="w-1/2">
         <AdminContainerAnalysis />
       </div>

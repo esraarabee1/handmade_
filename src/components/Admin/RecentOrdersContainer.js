@@ -4,13 +4,9 @@ import RecentOrderCard from "./RecentOrderCard";
 const RecentOrdersContainer = () => {
   return (
     <div>
-      <div className="container bg-white shadow-md rounded-lg p-6">
-        <h3 className="mb-4 text-lg font-bold">Recent Orders</h3>
-        <div className="flex-column">
-          <RecentOrderCard />
-          <RecentOrderCard />
-          <RecentOrderCard />
-          <RecentOrderCard />
+      <div className="container bg-white shadow-md rounded-lg p-6 flex-col gap-3">
+        <h3 className="text-lg font-bold">Recent Orders</h3>
+        <div className="flex-col gap-3">
           <RecentOrderCard />
           <RecentOrderCard />
           <RecentOrderCard />

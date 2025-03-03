@@ -1,34 +1,59 @@
 import React from "react";
 import Chart from "react-apexcharts";
+import { FaChevronDown } from "react-icons/fa";
 
 const BarChart = () => {
   const options = {
     chart: {
       type: "bar",
-      height: 350,
+      height: 300,
+      toolbar: { show: false }, // Hide export menu
     },
     xaxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // الأشهر أو الأيام
+      categories: [
+        "Sept 10",
+        "Sept 11",
+        "Sept 12",
+        "Sept 13",
+        "Sept 14",
+        "Sept 15",
+        "Sept 16",
+      ],
+      labels: { style: { colors: "#6B7280", fontSize: "12px" } }, // Light gray text
     },
-    colors: ["#007BFF"], // لون الأعمدة
+    colors: ["#007BFF"],
+    grid: {
+      show: false, // Remove background grid lines
+    },
     plotOptions: {
       bar: {
-        columnWidth: "50%", // عرض الأعمدة
+        borderRadius: 4, // Round edges
+        columnWidth: "40%",
       },
     },
   };
 
   const series = [
     {
-      name: "Sales", // اسم السلسلة
-      data: [40, 55, 60, 70, 80, 90, 100], // البيانات (المبيعات لكل شهر)
+      name: "Sales",
+      data: [25, 60, 30, 80, 50, 70, 90], // Sales data
     },
   ];
 
   return (
-    <div className="p-4 bg-white shadow rounded-lg">
-      <h3 className="mb-4 text-lg font-bold">Sales Over Time</h3>
-      <Chart options={options} series={series} type="bar" height="350" />
+    <div className="p-6 bg-white shadow-lg rounded-xl">
+      {/* Header with dropdown */}
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-gray-800">Summary</h3>
+        <div className="flex items-center gap-1 text-gray-500 text-sm cursor-pointer">
+          <span>Sales</span> <FaChevronDown size={12} />
+        </div>
+      </div>
+
+      {/* Chart */}
+      <div>
+        <Chart options={options} series={series} type="bar" height="250" />
+      </div>
     </div>
   );
 };
