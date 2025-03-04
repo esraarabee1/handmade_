@@ -16,6 +16,8 @@ const AddvendorHook = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [rolID, setRolID] = useState("");
+  const [banner, setBanner] = useState("");
+  const [description, setDescription] = useState("");
   const [load, setLoad] = useState(true);
 
   const onChangeName = (e) => {
@@ -39,8 +41,15 @@ const AddvendorHook = () => {
   const onChangeConfirmPassword = (e) => {
     setConfirmPassword(e.target.value);
   };
+
   const onChangeRoleId = (e) => {
     setRolID(e.target.value); // لا تستخدم Number()
+  };
+  const onChangeBanner = (e) => {
+    setBanner(e.target.value);
+  };
+  const onChangeDescription = (e) => {
+    setDescription(e.target.value);
   };
 
   const res = useSelector((state) => state.addvendorReducer.addvendor);
@@ -67,6 +76,8 @@ const AddvendorHook = () => {
       Phone: phone,
       UserName: userName,
       RoleId: rolID,
+      Banner: banner,
+      Description: description,
     };
 
     console.log("📦 Form Data Created:", data);
@@ -86,6 +97,8 @@ const AddvendorHook = () => {
     confirmPassword,
     userName,
     rolID,
+    banner,
+    description,
     onChangeName,
     onChangeLastName,
     onChangeEmail,
@@ -95,6 +108,8 @@ const AddvendorHook = () => {
     onChangeUserName,
     onChangeRoleId,
     OnSubmit,
+    onChangeBanner,
+    onChangeDescription,
   ];
 };
 

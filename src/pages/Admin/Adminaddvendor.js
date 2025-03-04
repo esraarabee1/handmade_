@@ -13,6 +13,8 @@ const Adminaddvendor = () => {
     confirmPassword,
     userName,
     rolID,
+    banner,
+    description,
     onChangeName,
     onChangeLastName,
     onChangeEmail,
@@ -22,6 +24,8 @@ const Adminaddvendor = () => {
     onChangeUserName,
     onChangeRoleId,
     OnSubmit,
+    onChangeBanner,
+    onChangeDescription,
   ] = AddvendorHook();
 
   return (
@@ -123,6 +127,30 @@ const Adminaddvendor = () => {
             <input
               value={rolID}
               onChange={onChangeRoleId}
+              type="text"
+              placeholder="Role ID"
+              className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-700">
+              Banner
+            </label>
+            <input
+              value={banner}
+              onChange={onChangeBanner}
+              type="text"
+              placeholder="Role ID"
+              className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-700">
+              Description
+            </label>
+            <input
+              value={description}
+              onChange={onChangeDescription}
               type="text"
               placeholder="Role ID"
               className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
