@@ -6,7 +6,7 @@ import { useGetDataToken } from "../../Hooks/useGetData";
 //get all category
 export const addToCart = (data) => async (dispatch) => {
   try {
-    const response = await useInsertData(`/api/CartItems`, data);
+    const response = await useInsertData(`/api/Home/AddToCart`, data);
     console.log("🔹 API Response from cart:", response);
 
     dispatch({
@@ -25,7 +25,7 @@ export const addToCart = (data) => async (dispatch) => {
 
 export const getUserCart = () => async (dispatch) => {
   try {
-    const response = await useGetDataToken("/api/CartItems");
+    const response = await useGetDataToken("/api/Cart/GetCart");
 
     console.log("✅ API Response from user cart:", response);
 

@@ -2,15 +2,8 @@ import React from "react";
 import cartprodone from "../../images/cartprodone.png";
 import AddToCartHook from "../../Hook/cart/addtocart-hook";
 
-const ProductCart = ({
-  category,
-  productName,
-  Price,
-  subTotal,
-  cartId,
-  quantity,
-}) => {
-  const [addToCartHandel] = AddToCartHook(cartId);
+const ProductCart = ({ category, productName, Price, quantity }) => {
+  const [addToCartHandel] = AddToCartHook();
   return (
     <div className="flex gap-4 p-4 items-center border rounded-lg">
       {/* Product Image */}

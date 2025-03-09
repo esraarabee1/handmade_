@@ -19,12 +19,10 @@ const CartItems = () => {
           cartItems.map((item) => {
             return (
               <ProductCart
-                category={cartprodone}
-                productName="Peace lily"
+                category={item.thumbImage}
+                productName={item.name}
                 Price={item.price}
-                subTotal={item.subTotal}
-                cartId={item.cartId}
-                quantity={item.quantity}
+                quantity={item.qty}
               />
             );
           })
