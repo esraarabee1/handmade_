@@ -19,6 +19,7 @@ const CartItems = () => {
           cartItems.map((item) => {
             return (
               <ProductCart
+                productId={item.id}
                 category={item.thumbImage}
                 productName={item.name}
                 Price={item.price}

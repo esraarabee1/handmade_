@@ -7,7 +7,7 @@ const CartPage = () => {
   return (
     <div>
       <NavBarLogin />
-      <div className="container mx-auto flex flex-col md:flex-row gap-6 justify-center items-center min-h-screen mb-10">
+      <div className="container mx-auto flex flex-col md:flex-row gap-6 justify-center  mt-6 ">
         {/* Cart Items Section */}
         <div className="w-full md:flex-1">
           <CartItems />

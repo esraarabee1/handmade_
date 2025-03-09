@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import cartprodone from "../../images/cartprodone.png";
 import AddToCartHook from "../../Hook/cart/addtocart-hook";
 
-const ProductCart = ({ category, productName, Price, quantity }) => {
+const ProductCart = ({ productId, category, productName, Price, quantity }) => {
+  const [cartItem, setCartItem] = useState([]);
+
+  const deleteHandel = (productId) => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter((item) => item.id !== productId);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    setCartItem(cart);
+    console.log(`🗑️ Deleted product with ID: ${productId}`);
+
+    window.location.reload();
+  };
+
   const [addToCartHandel] = AddToCartHook();
   return (
     <div className="flex gap-4 p-4 items-center border rounded-lg">
@@ -21,7 +33,7 @@ const ProductCart = ({ category, productName, Price, quantity }) => {
         {/* Title and Remove Button */}
         <div className="flex justify-between items-center">
           <h3 className="text-lg font-medium">{productName}</h3>
-          <button>
+          <button onClick={() => deleteHandel(productId)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
