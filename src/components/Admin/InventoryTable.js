@@ -1,16 +1,18 @@
 import React from "react";
-import AllProductHook from "../../Hook/all-product-hook";
+import { useNavigate } from "react-router-dom";
 import GetInventoryDataHook from "../../Hook/Admin/viewinventory-hook";
 
 const InventoryTable = () => {
   const [inventory] = GetInventoryDataHook();
+  const navigate = useNavigate();
+
   return (
     <div className="flex-1 overflow-x-auto bg-gray-100 min-h-screen">
       <table className="w-full bg-white shadow-md rounded-lg">
         <thead>
-          <tr className="border-b ">
+          <tr className="border-b">
             <th className="p-3 text-left"></th>
-            <th className="p-3 text-left "></th>
+            <th className="p-3 text-left"></th>
             <th className="p-3 text-left">Product Name</th>
             <th className="p-3 text-left">Category</th>
             <th className="p-3 text-left">Unit Price</th>
@@ -20,11 +22,15 @@ const InventoryTable = () => {
         </thead>
         <tbody>
           {inventory.map((item, index) => (
-            <tr key={index} className="border-b hover:bg-gray-100">
+            <tr
+              key={index}
+              className="border-b hover:bg-gray-100 cursor-pointer"
+              onClick={() => navigate(`/items/${item.id}`)} // 👈 التنقل لصفحة المنتج
+            >
               <td className="p-3">
                 <input type="checkbox" className="w-4 h-4" />
               </td>
-              <td className="p-3 ">
+              <td className="p-3">
                 <img
                   src={item.thumbImage}
                   alt="Product"

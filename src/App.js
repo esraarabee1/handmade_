@@ -9,6 +9,8 @@ import AdminaddProdPage from "./pages/Admin/Adminaddprodpage";
 import Adminviewinventory from "./pages/Admin/Adminviewinventory";
 import Adminviewvendors from "./pages/Admin/Adminviewvendors";
 import Adminaddvendor from "./pages/Admin/Adminaddvendor";
+import InventoryItem from "./components/Admin/InventoryItem";
+import AdminviewItem from "./pages/Admin/AdminviewItem";
 
 // تحميل الصفحات بشكل كسول
 const HomePage = React.lazy(() => import("./pages/Home/HomePage"));
@@ -64,6 +66,7 @@ function App() {
             <Route path="/inventory" element={<Adminviewinventory />} />
             <Route path="/viewvendors" element={<Adminviewvendors />} />
             <Route path="/addvendors" element={<Adminaddvendor />} />
+            <Route path="/items/:id" element={<AdminviewItem />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
