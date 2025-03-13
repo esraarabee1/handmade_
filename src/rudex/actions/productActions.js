@@ -3,12 +3,14 @@ import {
   GET_ON_PRODUCT,
   GET_ERROR,
   ADD_PRODUCT,
+  REMOVE_PRODUCT,
 } from "../type";
 import { getData } from "../../Hooks/useGetData";
 import {
   useInsertData,
   useInsertDataWithImage,
 } from "../../Hooks/useInsertData";
+import useDeleteData from "../../Hooks/useDeleteData";
 
 //create products with pagination
 export const createProduct = (data) => async (dispatch) => {
@@ -75,6 +77,24 @@ export const getOneProduct = (id) => async (dispatch) => {
     dispatch({
       type: GET_ERROR,
       payload: `error: ${e.message || e}`,
+    });
+  }
+};
+
+//delete prooduct with id
+export const deleteProduct = (id) => async (dispatch) => {
+  try {
+    const response = await useDeleteData(`/api/Products?id=${id}`);
+
+    dispatch({
+      type: REMOVE_PRODUCT,
+      payload: response,
+      loading: true,
+    });
+  } catch (e) {
+    dispatch({
+      type: GET_ERROR,
+      payload: "Error " + e,
     });
   }
 };
