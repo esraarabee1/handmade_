@@ -1,7 +1,7 @@
 import { GET_All_ORDERS, GET_ERROR } from "../../type";
 
 const initialState = {
-  allorders: [], // تأكد أن لديك بيانات افتراضية
+  allorders: [],
   loading: true,
 };
 

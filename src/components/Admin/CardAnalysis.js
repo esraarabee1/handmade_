@@ -1,5 +1,5 @@
 import React from "react";
-import { MdShoppingCart } from "react-icons/md"; // استيراد الأيقونة
+import { MdShoppingCart } from "react-icons/md";
 
 const CardAnalysis = () => {
   return (
@@ -7,7 +7,7 @@ const CardAnalysis = () => {
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center gap-2">
-          <MdShoppingCart className="text-blue-500 text-2xl" /> {/* الأيقونة */}
+          <MdShoppingCart className="text-blue-500 text-2xl" />
         </div>
         <button className="bg-gray-100 text-gray-600 px-4 py-2 rounded-md text-sm">
           This Week

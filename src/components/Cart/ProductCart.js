@@ -10,7 +10,7 @@ const ProductCart = ({ productId, category, productName, Price, quantity }) => {
     cart = cart.filter((item) => item.id !== productId);
     localStorage.setItem("cart", JSON.stringify(cart));
     setCartItem(cart);
-    console.log(`🗑️ Deleted product with ID: ${productId}`);
+    console.log(` Deleted product with ID: ${productId}`);
 
     window.location.reload();
   };
@@ -30,7 +30,6 @@ const ProductCart = ({ productId, category, productName, Price, quantity }) => {
 
       {/* Product Details */}
       <div className="flex flex-col flex-1 gap-2">
-        {/* Title and Remove Button */}
         <div className="flex justify-between items-center">
           <h3 className="text-lg font-medium">{productName}</h3>
           <button onClick={() => deleteHandel(productId)}>
@@ -49,17 +48,10 @@ const ProductCart = ({ productId, category, productName, Price, quantity }) => {
           </button>
         </div>
 
-        {/* Size */}
         <span className="text-sm text-gray-600">quantity:{quantity}</span>
 
-        {/* Price and Quantity Controls */}
         <div className="flex justify-between items-center">
           <span className="text-lg font-medium">${Price}</span>
-          <div className="flex items-center gap-2">
-            <button className="px-2 py-1 bg-gray-200 rounded-lg">-</button>
-            <span className="px-2">1</span>
-            <button className="px-2 py-1 bg-gray-200 rounded-lg">+</button>
-          </div>
         </div>
       </div>
     </div>

@@ -7,20 +7,19 @@ const useOneProduct = (id) => {
 
   useEffect(() => {
     if (id) {
-      dispatch(getOneProduct(id)); // ✅ إرسال `id` الصحيح
+      dispatch(getOneProduct(id));
     } else {
-      console.warn("⚠️ id غير موجود!");
+      console.warn(" id غير موجود!");
     }
-  }, [dispatch, id]); // ✅ التصحيح هنا
+  }, [dispatch, id]);
 
-  // جلب بيانات المنتج من Redux
   const productdetails = useSelector(
     (state) => state.productdetailsReducer?.product
   );
 
-  console.log("📌 بيانات المنتج:", productdetails);
+  console.log(" بيانات المنتج:", productdetails);
 
-  return { productdetails }; // ✅ استخدام كائن بدل مصفوفة
+  return { productdetails };
 };
 
 export default useOneProduct;

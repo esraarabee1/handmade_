@@ -8,12 +8,11 @@ import {
   MdBusinessCenter,
   MdSettings,
   MdLogout,
-} from "react-icons/md"; // استيراد الأيقونات من react-icons
+} from "react-icons/md";
 
 const AdminSideBar = () => {
   const location = useLocation();
 
-  // قائمة الروابط مع الأيقونات
   const navLinks = [
     { name: "Dashboard", path: "/admin", icon: <MdDashboard /> },
     { name: "Orders", path: "/admin/orders", icon: <MdOutlineShoppingCart /> },
@@ -66,11 +65,10 @@ const AdminSideBar = () => {
       {/* Logout Button */}
       <div className="p-6">
         <button
-          onClick={() => alert("Logging out...")} // استبدل هذا بوظيفة تسجيل الخروج الحقيقية
+          onClick={() => alert("Logging out...")}
           className="flex items-center gap-4 w-full px-6 py-4 text-lg rounded-md bg-white text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white transition-all"
         >
           <MdLogout className="text-2xl text-blue-500 group-hover:text-white" />{" "}
-          {/* أيقونة تسجيل الخروج */}
           <span className="group-hover:text-white">Logout</span>
         </button>
       </div>

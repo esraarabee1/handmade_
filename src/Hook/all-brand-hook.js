@@ -11,12 +11,11 @@ const AllBrandsHook = () => {
   }, [dispatch]);
 
   const state = useSelector((state) => state);
-  console.log("Redux State:", state); // ✅ تحقق من تحديث Redux
-
+  console.log("Redux State:", state);
   const brands = useSelector((state) => state.allBrands?.brands);
   const loading = useSelector((state) => state.allBrands?.loading);
 
-  console.log("Brand Data:", brands.data); // ✅ تحقق من ظهور البيانات هنا
+  console.log("Brand Data:", brands.data);
 
   return [brands, loading];
 };

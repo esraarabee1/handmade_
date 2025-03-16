@@ -1,7 +1,7 @@
 import { ADD_TO_WISH, GET_ERROR } from "../../type";
 
 const initialState = {
-  addtowish: null, // اجعلها null بدلاً من []
+  addtowish: null,
   loading: false,
   error: null,
 };

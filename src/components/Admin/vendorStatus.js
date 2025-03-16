@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUsers } from "react-icons/fa"; // أيقونة المستخدمين
+import { FaUsers } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 const VendorStatus = () => {
   const navigate = useNavigate();
@@ -20,9 +20,7 @@ const VendorStatus = () => {
         </button>
       </div>
 
-      {/* صندوق البيانات */}
       <div className="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
-        {/* أيقونة */}
         <div className="bg-gray-100 p-3 rounded-full">
           <FaUsers className="text-gray-700 text-xl" />
         </div>

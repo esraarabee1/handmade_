@@ -7,11 +7,11 @@ const initialState = {
 };
 
 const authloginReducer = (state = initialState, action) => {
-  console.log("🔄 Reducer Action Received:", action); // 👈 تحقق من وصول البيانات
+  console.log(" Reducer Action Received:", action);
 
   switch (action.type) {
     case LOGIN_USER:
-      console.log("✅ User logged in successfully:", action.payload);
+      console.log(" User logged in successfully:", action.payload);
       return {
         ...state,
         loginUser: action.payload,
@@ -19,7 +19,7 @@ const authloginReducer = (state = initialState, action) => {
         error: null,
       };
     case GET_ERROR:
-      console.log("❌ Error in login:", action.payload);
+      console.log(" Error in login:", action.payload);
       return {
         ...state,
         loginUser: null,

@@ -19,12 +19,12 @@ const AllProductHook = () => {
   }, []);
 
   const state = useSelector((state) => state);
-  console.log("Redux State:", state); // ✅ تحقق من تحديث Redux
+  console.log("Redux State:", state);
 
   const products = useSelector((state) => state.allProducts?.products);
   const loading = useSelector((state) => state.allProducts?.loading);
 
-  console.log("products Data:", products.data); // ✅ تحقق من ظهور البيانات هنا
+  console.log("products Data:", products.data);
 
   return [products, loading, getProduct];
 };

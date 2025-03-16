@@ -43,7 +43,7 @@ const AddvendorHook = () => {
   };
 
   const onChangeRoleId = (e) => {
-    setRolID(e.target.value); // لا تستخدم Number()
+    setRolID(e.target.value);
   };
   const onChangeBanner = (e) => {
     setBanner(e.target.value);
@@ -80,7 +80,7 @@ const AddvendorHook = () => {
       Description: description,
     };
 
-    console.log("📦 Form Data Created:", data);
+    console.log(" Form Data Created:", data);
 
     await dispatch(createVendor(data));
 

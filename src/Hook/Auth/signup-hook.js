@@ -39,7 +39,7 @@ const RegisterHook = () => {
     setConfirmPassword(e.target.value);
   };
   const onChangeRoleId = (e) => {
-    setRolID(e.target.value); // لا تستخدم Number()
+    setRolID(e.target.value);
   };
 
   const res = useSelector((state) => state.authReducer.createUser);
@@ -75,7 +75,7 @@ const RegisterHook = () => {
     formData.append("UserName", userName);
     formData.append("RoleId", rolID);
 
-    console.log("📦 Form Data Created:", formData);
+    console.log(" Form Data Created:", formData);
 
     await dispatch(createNewUser(formData));
 

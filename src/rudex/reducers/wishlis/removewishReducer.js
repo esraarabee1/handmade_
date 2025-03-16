@@ -1,7 +1,7 @@
 import { REMOVE_FROM_WISHLIST, GET_ERROR } from "../../type";
 
 const initialState = {
-  removewish: null, // اجعلها null بدلاً من []
+  removewish: null,
   loading: false,
   error: null,
 };

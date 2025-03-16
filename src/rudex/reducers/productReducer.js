@@ -1,7 +1,7 @@
 import { GET_ALL_PRODUCT, GET_ERROR } from "../type";
 
 const initialState = {
-  products: [], // تأكد أن لديك بيانات افتراضية
+  products: [],
   loading: true,
 };
 

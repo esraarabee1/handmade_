@@ -1,7 +1,7 @@
 import { ADD_TO_VENDORS, GET_ERROR } from "../../type";
 
 const initialState = {
-  addvendor: null, // اجعلها null بدلاً من []
+  addvendor: null,
   loading: false,
   error: null,
 };

@@ -11,11 +11,10 @@ const GetAllUserCartHook = () => {
     const get = async () => {
       setLoading(true);
 
-      // محاولة جلب الكارت من localStorage
       const storedCart = localStorage.getItem("cart");
 
       if (storedCart) {
-        setCartItems(JSON.parse(storedCart)); // تحويل النص إلى كائن JSON
+        setCartItems(JSON.parse(storedCart)); // تحويل النص إلى  JSON
         setLoading(false);
       } else {
         await dispatch(getUserCart());
@@ -33,7 +32,6 @@ const GetAllUserCartHook = () => {
       console.log("get cart", res);
       setCartItems(res);
 
-      // حفظ الكارت في localStorage بعد استرجاعه من API
       localStorage.setItem("cart", JSON.stringify(res));
     }
   }, [loading]);

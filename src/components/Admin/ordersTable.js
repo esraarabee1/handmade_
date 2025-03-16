@@ -23,7 +23,7 @@ const OrdersTable = () => {
               <td className="p-3">
                 <input type="checkbox" className="w-4 h-4" />
               </td>
-              <td className="p-3">{order.user}</td>
+              <td className="p-3">{order.user ? order.user : "Someone"}</td>
               <td className="p-3">{order.id}</td>
               <td className="p-3">{order.amount}</td>
 

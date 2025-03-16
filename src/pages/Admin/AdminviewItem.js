@@ -13,7 +13,7 @@ const AdminviewItem = () => {
 
       {/* المحتوى الرئيسي */}
       <div className="flex flex-col flex-1 gap-4">
-        <DashHeader /> {/* ✅ تغيير flex إلى flex-col */}
+        <DashHeader />
         <InventoryItem />
       </div>
     </div>

@@ -12,14 +12,13 @@ const useDeleteProductHook = (id) => {
     setIsPress(false);
   };
 
-  // جلب بيانات المنتج من Redux
   const productremoved = useSelector(
     (state) => state.deleteprodReducer?.removedprod
   );
 
   console.log("📌 prodremoved is:", productremoved);
 
-  return { onSubmit, isPress }; // ✅ استخدام كائن بدل مصفوفة
+  return { onSubmit, isPress };
 };
 
 export default useDeleteProductHook;

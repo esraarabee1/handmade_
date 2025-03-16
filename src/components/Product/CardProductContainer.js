@@ -11,13 +11,13 @@ const CardProductsContainer = ({ title, btntitle, pathText }) => {
   const [favproducts, , favProd] = AllfavproductHook();
   useEffect(() => {
     console.log("🛒 favproducts:", favproducts);
-    console.log("🆔 favProd (IDs فقط):", favProd);
+    console.log("🆔 favProd :", favProd);
   }, [favproducts, favProd]);
   return (
     <div className="container mx-auto px-4">
       {/* العنوان الفرعي */}
       <SubTiltle title={title} btntitle={btntitle} pathText={pathText} />
-      {/* شبكة البطاقات */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4 ">
         {products.data ? (
           products.data.slice(0, 4).map((item) => {

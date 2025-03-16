@@ -1,7 +1,7 @@
 import { GET_ALL_BRAND, GET_ERROR } from "../type";
 
 const initialState = {
-  brands: [], // تأكد أن لديك بيانات افتراضية
+  brands: [],
   loading: true,
 };
 

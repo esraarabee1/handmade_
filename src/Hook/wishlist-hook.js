@@ -14,16 +14,16 @@ const useWishlistHook = (item, favProd = []) => {
   const [loadingRemove, setLoadingRemove] = useState(true);
   const [userID, setUserID] = useState(null);
 
-  // ✅ جلب `userID` من LocalStorage عند تحميل المكون
+  // جلب `userID` من LocalStorage عند تحميل المكون
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (userData) {
       const parsedUser = JSON.parse(userData);
-      setUserID(parsedUser?.id); // تأكد أن المفتاح صحيح
+      setUserID(parsedUser?.id);
     }
   }, []);
 
-  // ✅ تأكد أن `favProd` هو مصفوفة قبل استخدام `some()`
+  //  تأكد أن `favProd` هو مصفوفة قبل استخدام `some()`
   const Fav = Array.isArray(favProd) && favProd.some((fitem) => fitem === item);
   const [isFav, setIsFav] = useState(Fav);
 
@@ -50,7 +50,7 @@ const useWishlistHook = (item, favProd = []) => {
 
   const addToWishListData = async () => {
     if (!userID) {
-      console.warn("⚠️ User ID not found!");
+      console.warn(" User ID not found!");
       return;
     }
 
@@ -61,7 +61,7 @@ const useWishlistHook = (item, favProd = []) => {
     await dispatch(
       addtoWishlist({
         ProductId: item,
-        UserId: userID, // ✅ استخدم `userID` الحقيقي
+        UserId: userID,
       })
     );
 
@@ -70,7 +70,7 @@ const useWishlistHook = (item, favProd = []) => {
 
   const removeToWishListData = async () => {
     if (!userID) {
-      console.warn("⚠️ User ID not found!");
+      console.warn(" User ID not found!");
       return;
     }
 
@@ -85,13 +85,13 @@ const useWishlistHook = (item, favProd = []) => {
 
   useEffect(() => {
     if (!loadingAdd) {
-      console.log("✅ Wishlist Added:", resAdd);
+      console.log(" Wishlist Added:", resAdd);
     }
   }, [loadingAdd]);
 
   useEffect(() => {
     if (!loadingRemove) {
-      console.log("✅ Wishlist Removed:", resRemove);
+      console.log(" Wishlist Removed:", resRemove);
     }
   }, [loadingRemove]);
 

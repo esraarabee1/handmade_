@@ -20,29 +20,29 @@ const AddProdHook = () => {
   //to change name state
   const onChangeName = (event) => {
     setName(event.target.value.trim());
-    console.log("📝 Product Name:", event.target.value);
+    console.log(" Product Name:", event.target.value);
   };
   const onChangeSlug = (event) => {
     setSlug(event.target.value.trim());
-    console.log("🔗 Slug:", event.target.value);
+    console.log(" Slug:", event.target.value);
   };
   const onChangeSellprice = (event) => {
     const value = event.target.value;
     setSellprice(
       value === "" ? "" : isNaN(parseFloat(value)) ? "" : parseFloat(value)
     );
-    console.log("💰 Sell Price:", event.target.value);
+    console.log(" Sell Price:", event.target.value);
   };
 
   const onChangeQty = (event) => {
     const value = event.target.value;
     setQty(value === "" ? "" : isNaN(parseInt(value)) ? "" : parseInt(value));
-    console.log("💰 Sell Price:", event.target.value);
+    console.log(" Sell Price:", event.target.value);
   };
 
   const onChangeVendor = (event) => {
     setVendor(event.target.value.trim());
-    console.log("🏪 Vendor:", event.target.value);
+    console.log(" Vendor:", event.target.value);
   };
   const onChangeShortdesc = (event) => {
     setShortdesc(event.target.value.trim());
@@ -66,7 +66,7 @@ const AddProdHook = () => {
   const uploadImageToCloudinary = async (file) => {
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", "my_presentt"); // استبدل بـ upload_preset الصحيح
+    formData.append("upload_preset", "my_presentt");
 
     try {
       const response = await fetch(
@@ -78,15 +78,15 @@ const AddProdHook = () => {
       );
 
       const data = await response.json();
-      console.log("✅ رابط الصورة بعد الرفع:", data.secure_url);
+      console.log("image url after upload", data.secure_url);
 
       if (data.secure_url) {
         return data.secure_url;
       } else {
-        throw new Error("⚠️ فشل رفع الصورة، لم يتم الحصول على رابط.");
+        throw new Error("⚠️failed in upload img");
       }
     } catch (error) {
-      console.error("❌ خطأ أثناء رفع الصورة:", error);
+      console.error("error in upload", error);
       return null;
     }
   };
@@ -100,13 +100,13 @@ const AddProdHook = () => {
 
     let imageUrl = img; // الصورة الافتراضية
 
-    // **إذا تم تحديد صورة جديدة، قم برفعها إلى Cloudinary**
+    // **UPload to Cloudinary**
     if (selectedFile) {
       const uploadedImageUrl = await uploadImageToCloudinary(selectedFile);
       if (uploadedImageUrl) {
         imageUrl = uploadedImageUrl;
       } else {
-        alert("⚠️ فشل رفع الصورة، تأكد من اختيار صورة صالحة.");
+        alert("failed upload");
         setLoading(false);
         return;
       }
@@ -126,7 +126,7 @@ const AddProdHook = () => {
         "A stylish handmade leather bag crafted with premium materials, combining luxury and functionality.",
     };
 
-    console.log("🚀 البيانات المرسلة للخادم:", productData);
+    console.log(" البيانات المرسلة :", productData);
     await dispatch(createProduct(productData));
 
     setLoading(false);

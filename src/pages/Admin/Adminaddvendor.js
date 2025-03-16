@@ -171,7 +171,7 @@ const Adminaddvendor = () => {
             <button
               onClick={(e) => {
                 e.preventDefault();
-                console.log("🖱️ Button Clicked!");
+                console.log(" Button Clicked!");
                 OnSubmit();
               }}
               type="submit"

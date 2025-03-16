@@ -9,7 +9,7 @@ const initialState = {
 export const getfavReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ALL_FAV:
-      console.log("Reducer Updated:", action.payload); // ✅ تحقق من البيانات القادمة
+      console.log("Reducer Updated:", action.payload);
       return {
         ...state,
         favprods: action.payload,

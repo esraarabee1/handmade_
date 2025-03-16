@@ -1,7 +1,7 @@
 import { CREATE_NEW_USER, GET_ERROR } from "../type";
 
 const initialState = {
-  createUser: null, // اجعلها null بدلاً من []
+  createUser: null,
   loading: false,
   error: null,
 };

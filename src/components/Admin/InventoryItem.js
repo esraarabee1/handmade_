@@ -6,9 +6,8 @@ import useDeleteProductHook from "../../Hook/products/deleteprod-hook";
 const InventoryItem = () => {
   const { id } = useParams();
   const { productdetails } = useOneProduct(id);
-  const { onSubmit, isPress } = useDeleteProductHook(id); // ✅ استدعاء الـ Hook قبل أي شرط
+  const { onSubmit, isPress } = useDeleteProductHook(id);
 
-  // ✅ إذا لم يتم تحميل المنتج، يتم إرجاع رسالة التحميل
   if (!productdetails) return <p>🚀 جاري التحميل...</p>;
 
   return (
@@ -32,7 +31,7 @@ const InventoryItem = () => {
               onSubmit();
             }}
             className="bg-[#CC5F5F] text-white px-4 py-2 rounded-[12px] hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
-            disabled={isPress} // ✅ تعطيل الزر أثناء الحذف
+            disabled={isPress}
           >
             {isPress ? "Unpublishing..." : "Unpublish Product"}
           </button>

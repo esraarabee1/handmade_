@@ -1,7 +1,7 @@
 import { GET_ALL_CATEGORY, GET_ERROR } from "../type";
 
 const initialState = {
-  category: [], // تأكد أن لديك بيانات افتراضية
+  category: [],
   loading: true,
 };
 

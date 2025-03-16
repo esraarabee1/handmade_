@@ -11,12 +11,12 @@ const AllCategoryHook = () => {
   }, [dispatch]);
 
   const state = useSelector((state) => state);
-  console.log("Redux State:", state); // ✅ تحقق من تحديث Redux
+  console.log("Redux State:", state);
 
   const category = useSelector((state) => state.allCategory?.category);
   const loading = useSelector((state) => state.allCategory?.loading);
 
-  console.log("Category Data:", category.data); // ✅ تحقق من ظهور البيانات هنا
+  console.log("Category Data:", category.data);
 
   return [category, loading];
 };

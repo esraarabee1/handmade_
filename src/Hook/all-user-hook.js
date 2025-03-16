@@ -10,16 +10,15 @@ const useWishlistHook = () => {
   }, [dispatch]);
 
   const state = useSelector((state) => state);
-  console.log("Redux State:", state); // ✅ تحقق من تحديث Redux
-
+  console.log("Redux State:", state);
   const users = useSelector((state) => state.allUsersReducer?.users);
   const loading = useSelector((state) => state.allUsersReducer?.loading);
 
-  console.log("users Data:", users); // ✅ تحقق من ظهور البيانات هنا
+  console.log("users Data:", users);
 
   const parseJwt = (token) => {
     try {
-      return JSON.parse(atob(token.split(".")[1])); // ✅ فك تشفير الـ JWT
+      return JSON.parse(atob(token.split(".")[1]));
     } catch (e) {
       return null;
     }
@@ -28,7 +27,7 @@ const useWishlistHook = () => {
   const userData = JSON.parse(localStorage.getItem("user"));
   const decodedToken = parseJwt(userData?.token);
 
-  console.log("User ID:", decodedToken?.sub); // ✅ عرض الـ id (عادةً يكون `sub` في الـ JWT)
+  console.log("User ID:", decodedToken?.sub);
 
   return [users];
 };

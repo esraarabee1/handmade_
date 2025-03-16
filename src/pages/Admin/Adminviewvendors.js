@@ -14,9 +14,9 @@ const Adminviewvendors = () => {
 
       {/* المحتوى الرئيسي */}
       <div className="flex flex-col flex-1 gap-4">
-        <DashHeader /> {/* ✅ تغيير flex إلى flex-col */}
-        <VendorStatus /> {/* ✅ سيظهر فوق */}
-        <VendorsTable /> {/* ✅ سيظهر أسفل */}
+        <DashHeader />
+        <VendorStatus />
+        <VendorsTable />
       </div>
     </div>
   );

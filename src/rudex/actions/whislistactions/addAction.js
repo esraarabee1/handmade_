@@ -26,11 +26,10 @@ export const addtoWishlist = (data) => async (dispatch) => {
 export const removeFromWishlist = (userID, prodID) => async (dispatch) => {
   try {
     if (!userID || !prodID) {
-      console.warn("❌ userID أو prodID غير موجود!");
+      console.warn(" userID أو prodID غير موجود!");
       return;
     }
 
-    // ✅ تعديل الرابط ليكون باستخدام `query params`
     const response = await useDeleteData(
       `/api/WishLists?UserId=${userID}&ProductId=${prodID}`
     );
@@ -39,14 +38,14 @@ export const removeFromWishlist = (userID, prodID) => async (dispatch) => {
       throw new Error(response.error);
     }
 
-    console.log("✅ Removed from wishlist:", response);
+    console.log(" Removed from wishlist:", response);
 
     dispatch({
       type: REMOVE_FROM_WISHLIST,
       payload: response,
     });
   } catch (e) {
-    console.error("❌ Failed to remove from wishlist:", e);
+    console.error(" Failed to remove from wishlist:", e);
 
     dispatch({
       type: GET_ERROR,
@@ -57,19 +56,19 @@ export const removeFromWishlist = (userID, prodID) => async (dispatch) => {
 
 export const getAllFav = (userID) => async (dispatch) => {
   try {
-    console.log("👤 Fetching wishlist for user ID:", userID);
+    console.log(" Fetching wishlist for user ID:", userID);
 
     if (!userID) {
-      console.error("⚠️ User ID is undefined or null!");
+      console.error(" User ID is undefined or null!");
       return;
     }
 
-    const response = await useGetDataToken(`/api/WishLists`, { id: userID }); // ✅ تم تصحيح إرسال الـ userID
+    const response = await useGetDataToken(`/api/WishLists`, { id: userID });
 
-    console.log("✅ API Response:", response);
+    console.log(" API Response:", response);
 
     if (!response) {
-      console.warn("⚠️ No favorite products found.");
+      console.warn(" No favorite products found.");
       return;
     }
 
@@ -78,7 +77,7 @@ export const getAllFav = (userID) => async (dispatch) => {
       payload: response,
     });
   } catch (e) {
-    console.error("❌ Error in getAllFav:", e);
+    console.error(" Error in getAllFav:", e);
     dispatch({
       type: GET_ERROR,
       payload: "Error: " + e.message,

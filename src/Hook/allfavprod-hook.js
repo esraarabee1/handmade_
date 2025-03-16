@@ -7,32 +7,30 @@ const AllfavproductHook = () => {
   const [favProd, setFavProd] = useState([]);
   const [userID, setUserID] = useState(null);
 
-  // ✅ جلب `userID` من LocalStorage عند تحميل المكون
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (userData) {
       const parsedUser = JSON.parse(userData);
-      setUserID(parsedUser?.id); // تأكد من أن المفتاح صحيح
+      setUserID(parsedUser?.id);
     }
   }, []);
 
   useEffect(() => {
     if (userID) {
-      console.log("🚀 Fetching fav products for user:", userID);
-      dispatch(getAllFav(userID)); // ✅ إرسال `userID` الصحيح
+      console.log(" Fetching fav products for user:", userID);
+      dispatch(getAllFav(userID));
     } else {
-      console.warn("⚠️ User ID not found!");
+      console.warn(" User ID not found!");
     }
   }, [dispatch, userID]);
 
-  // ✅ استرجاع البيانات من Redux
   const favproducts =
     useSelector((state) => state.getfavReducer?.favprods) || [];
   const loading = useSelector((state) => state.getfavReducer?.loading);
 
-  console.log("📌 favProducts Data:", favproducts);
+  console.log(" favProducts Data:", favproducts);
 
-  // ✅ تحديث `favProd` عند تغيير `favproducts`
+  //  تحديث `favProd` عند تغيير `favproducts`
   useEffect(() => {
     if (Array.isArray(favproducts) && favproducts.length > 0) {
       const extractedProducts = favproducts.map((item) => item.productId);
@@ -43,7 +41,7 @@ const AllfavproductHook = () => {
     }
   }, [favproducts]);
 
-  return [favproducts, , favProd]; // ✅ الحل الصحيح
+  return [favproducts, , favProd];
 };
 
 export default AllfavproductHook;

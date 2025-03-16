@@ -11,7 +11,6 @@ const AddToCartHook = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
 
-  // إضافة المنتج إلى السلة
   const addToCartHandel = async () => {
     setLoading(true);
     await dispatch(
@@ -27,12 +26,10 @@ const AddToCartHook = () => {
 
   useEffect(() => {
     if (!loading && res?.data) {
-      console.log("✅ Added to cart:", res.data);
+      console.log(" Added to cart:", res.data);
 
-      // 🔹 جلب البيانات الحالية من `localStorage`
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-      // 🔍 التحقق مما إذا كان المنتج موجودًا بالفعل
       const existingProduct = cart.find((item) => item.id === res.data.id);
       if (existingProduct) {
         existingProduct.qty += 1; // زيادة الكمية إذا كان المنتج موجودًا
@@ -41,14 +38,14 @@ const AddToCartHook = () => {
           id: res.data.id,
           name: res.data.name,
           price: res.data.price,
-          qty: 1, // الكمية الافتراضية
+          qty: 1,
           thumbImage: res.data.thumbImage,
           brandId: res.data.brandId,
           categoryId: res.data.categoryId,
         });
       }
 
-      // 💾 حفظ البيانات الجديدة في `localStorage`
+      // حفظ البيانات الجديدة في `localStorage`
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   }, [loading, res]);

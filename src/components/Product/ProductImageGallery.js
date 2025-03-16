@@ -38,7 +38,7 @@ const ProductImageGallery = () => {
             <img
               src={productdetails?.thumbImage}
               alt={`Main Image ${index + 1}`}
-              className="h-[450px] w-full object-cover rounded-md shadow" // ✅ تصغير الطول فقط
+              className="h-[450px] w-full object-cover rounded-md shadow"
               loading="lazy"
             />
           </SwiperSlide>
@@ -48,7 +48,7 @@ const ProductImageGallery = () => {
       {/* Thumbnails */}
       <Swiper
         modules={[Thumbs]}
-        slidesPerView={4} // ✅ تبقى كما هي
+        slidesPerView={4}
         spaceBetween={8}
         onSwiper={setThumbsSwiper}
         className="w-full"

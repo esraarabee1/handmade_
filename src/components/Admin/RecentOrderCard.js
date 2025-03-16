@@ -1,5 +1,5 @@
 import React from "react";
-import categorytw from "../../images/categorytw.png"; // تأكد من مسار الصورة
+import categorytw from "../../images/categorytw.png";
 
 const RecentOrderCard = () => {
   return (

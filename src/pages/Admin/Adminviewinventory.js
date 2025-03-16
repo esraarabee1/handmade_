@@ -15,9 +15,9 @@ const Adminviewinventory = () => {
 
       {/* المحتوى الرئيسي */}
       <div className="flex flex-col flex-1 gap-4">
-        <DashHeader /> {/* ✅ تغيير flex إلى flex-col */}
-        <InventoryStatus /> {/* ✅ سيظهر فوق */}
-        <InventoryTable /> {/* ✅ سيظهر أسفل */}
+        <DashHeader />
+        <InventoryStatus />
+        <InventoryTable />
       </div>
     </div>
   );

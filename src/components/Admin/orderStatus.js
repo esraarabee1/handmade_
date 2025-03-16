@@ -1,23 +1,19 @@
 import React from "react";
-import { FaUsers } from "react-icons/fa"; // أيقونة المستخدمين
+import { FaUsers } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 const OrderStatus = () => {
   const navigate = useNavigate();
   return (
     <div className="rounded-lg ">
-      {/* العنوان */}
       <div className="mb-4">
         <h2 className="text-lg font-semibold">Orders Summary</h2>
       </div>
 
-      {/* صندوق البيانات */}
       <div className="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
-        {/* أيقونة */}
         <div className="bg-gray-100 p-3 rounded-full">
           <FaUsers className="text-gray-700 text-xl" />
         </div>
 
-        {/* التفاصيل */}
         <div className="flex-1 flex justify-between">
           <div>
             <p className="text-sm text-gray-500">All Orders</p>

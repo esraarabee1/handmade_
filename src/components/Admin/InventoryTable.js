@@ -25,7 +25,7 @@ const InventoryTable = () => {
             <tr
               key={index}
               className="border-b hover:bg-gray-100 cursor-pointer"
-              onClick={() => navigate(`/items/${item.id}`)} // 👈 التنقل لصفحة المنتج
+              onClick={() => navigate(`/items/${item.id}`)}
             >
               <td className="p-3">
                 <input type="checkbox" className="w-4 h-4" />

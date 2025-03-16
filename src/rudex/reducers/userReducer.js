@@ -1,7 +1,7 @@
 import { GET_ALL_USERS, GET_ERROR } from "../type";
 
 const initialState = {
-  users: null, // تأكد أن لديك بيانات افتراضية
+  users: null,
   loading: false,
 };
 

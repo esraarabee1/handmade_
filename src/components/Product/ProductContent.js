@@ -8,7 +8,7 @@ import useOneProduct from "../../Hook/products/getoneprod-hook";
 
 const ProductContent = () => {
   const { id } = useParams();
-  const { productdetails } = useOneProduct(id); // ✅ جلب بيانات المنتج
+  const { productdetails } = useOneProduct(id);
 
   if (!productdetails) return <p>🚀 جاري التحميل...</p>;
 
