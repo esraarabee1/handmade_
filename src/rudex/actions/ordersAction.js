@@ -1,4 +1,4 @@
-import { GET_All_ORDERS, GET_ERROR } from "../type";
+import { GET_All_ORDERS, GET_ERROR, GET_ONE_ORDER } from "../type";
 import { getData, useGetDataToken } from "../../Hooks/useGetData";
 import {
   useInsertData,
@@ -17,6 +17,22 @@ export const getAllorders = () => async (dispatch) => {
     dispatch({
       type: GET_ERROR,
       payload: "Error " + e,
+    });
+  }
+};
+
+export const getOneOrder = (id) => async (dispatch) => {
+  try {
+    const response = await getData(`/api/Orders/GetOrder?id=${id}`);
+    console.log("order ", response.data);
+    dispatch({
+      type: GET_ONE_ORDER,
+      payload: response.data,
+    });
+  } catch (e) {
+    dispatch({
+      type: GET_ERROR,
+      payload: `error: ${e.message || e}`,
     });
   }
 };
