@@ -18,3 +18,5 @@ export const ADD_TO_VENDORS = "ADD_TO_VENDORS";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export const GET_All_ORDERS = "GET_All_ORDERS";
 export const GET_ONE_ORDER = "GET_ONE_ORDER";
+export const GET_All_INVENTORY = "GET_All_INVENTORY";
+export const GET_All_ORDERS_VENDOR = "GET_All_ORDERS_VENDOR";

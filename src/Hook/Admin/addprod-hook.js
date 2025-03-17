@@ -9,6 +9,7 @@ const AddProdHook = () => {
   const [name, setName] = useState("");
   const [slug, setSlug] = useState("");
   const [sellprice, setSellprice] = useState(0);
+  const [offerprice, setOfferprice] = useState(0);
   const [qty, setQty] = useState("");
   const [vendor, setVendor] = useState("");
   const [shortdesc, setShortdesc] = useState("");
@@ -26,6 +27,14 @@ const AddProdHook = () => {
     setSlug(event.target.value.trim());
     console.log(" Slug:", event.target.value);
   };
+  const onChangeOfferprice = (event) => {
+    const value = event.target.value;
+    setOfferprice(
+      value === "" ? "" : isNaN(parseFloat(value)) ? "" : parseFloat(value)
+    );
+    console.log(" Offer Price:", event.target.value);
+  };
+
   const onChangeSellprice = (event) => {
     const value = event.target.value;
     setSellprice(
@@ -117,6 +126,7 @@ const AddProdHook = () => {
       Slug: slug || "default-slug",
       ThumbImage: imageUrl,
       Price: parseFloat(sellprice) || 1,
+      offerPrice: parseFloat(offerprice) || 1,
       Qty: parseInt(qty) || 1,
       VendorId: vendor || "3",
       ShortDescription: shortdesc || "Default short description",
@@ -148,6 +158,7 @@ const AddProdHook = () => {
     name,
     slug,
     sellprice,
+    offerprice,
     qty,
     vendor,
     loading,
@@ -159,6 +170,7 @@ const AddProdHook = () => {
     onChangeName,
     onChangeSlug,
     onChangeSellprice,
+    onChangeOfferprice,
     onChangeQty,
     onChangeVendor,
     onChangeShortdesc,

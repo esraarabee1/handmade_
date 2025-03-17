@@ -7,6 +7,7 @@ const UploadProd = () => {
     name,
     slug,
     sellprice,
+    offerprice,
     qty,
     vendor,
     loading,
@@ -18,6 +19,7 @@ const UploadProd = () => {
     onChangeName,
     onChangeSlug,
     onChangeSellprice,
+    onChangeOfferprice,
     onChangeQty,
     onChangeVendor,
     onChangeShortdesc,
@@ -60,6 +62,13 @@ const UploadProd = () => {
                 className="p-2 border rounded-md"
                 type="text"
                 placeholder="Selling Price"
+              />
+              <input
+                value={offerprice}
+                onChange={onChangeOfferprice}
+                className="p-2 border rounded-md"
+                type="text"
+                placeholder="offer Price"
               />
               <input
                 value={qty}

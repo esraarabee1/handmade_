@@ -87,20 +87,6 @@ const UserProfile = () => {
             </select>
           </div>
         </div>
-
-        <div className="mt-6">
-          <h3 className="text-lg font-semibold">My email Address</h3>
-          <div className="flex items-center space-x-4 mt-2">
-            <Mail className="text-blue-500" />
-            <div>
-              <p className="text-gray-800">MahmoudAlaa.w@gmail.com</p>
-              <p className="text-sm text-gray-500">1 month ago</p>
-            </div>
-          </div>
-          <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg">
-            + Add Email Address
-          </button>
-        </div>
       </div>
     </div>
   );

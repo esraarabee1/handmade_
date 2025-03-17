@@ -106,10 +106,10 @@ const Navbar = () => {
                 <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md z-50">
                   {user.roles[0] == "Customer" ? (
                     <a
-                      href="/admin"
+                      href="/vendor/inventory"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
-                      Admin Dashboard
+                      vendor Dashboard
                     </a>
                   ) : (
                     <a
