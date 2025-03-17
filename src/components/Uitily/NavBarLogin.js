@@ -104,7 +104,14 @@ const Navbar = () => {
               {/* Dropdown Menu */}
               {userMenuOpen && user && (
                 <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md z-50">
-                  {user.roles[0] == "Customer" ? (
+                  {user.roles == "Admin" ? (
+                    <a
+                      href="/admin"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      Admin Dashboard
+                    </a>
+                  ) : user.roles == "Vendor" ? (
                     <a
                       href="/vendor/inventory"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -192,17 +199,24 @@ const Navbar = () => {
               </a>
               {user ? (
                 <div className="text-center">
-                  {user.roles[0] !== "Customer" ? (
+                  {user.roles == "Admin" ? (
                     <a
-                      href="/admin/allproducts"
-                      className="block text-gray-700 hover:text-gray-900"
+                      href="/admin"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
-                      Admin Dash
+                      Admin Dashboard
+                    </a>
+                  ) : user.roles == "Vendor" ? (
+                    <a
+                      href="/vendor/inventory"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      vendor Dashboard
                     </a>
                   ) : (
                     <a
                       href="/user/UserProfilePage"
-                      className="block text-gray-700 hover:text-gray-900"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
                       My Profile
                     </a>

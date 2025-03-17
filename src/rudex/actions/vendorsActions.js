@@ -26,22 +26,7 @@ export const getAllvendors = () => async (dispatch) => {
   }
 };
 
-export const getAllitemsvendor = () => async (dispatch) => {
-  try {
-    const response = await useGetDataToken("/api/Products");
-    console.log("itemsvendordata", response.data);
-    dispatch({
-      type: GET_All_INVENTORY,
-      payload: response,
-    });
-  } catch (e) {
-    dispatch({
-      type: GET_ERROR,
-      payload: "Error " + e,
-    });
-  }
-};
-
+//get all orders and inventory for vendor
 export const getAllordersvendor = (id) => async (dispatch) => {
   try {
     const response = await getData(`/api/Vendors/GetVendor?id=${id}`);

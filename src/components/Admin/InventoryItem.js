@@ -1,13 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useOneProduct from "../../Hook/products/getoneprod-hook";
 import useDeleteProductHook from "../../Hook/products/deleteprod-hook";
 
 const InventoryItem = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { productdetails } = useOneProduct(id);
   const { onSubmit, isPress } = useDeleteProductHook(id);
-
+  const user = JSON.parse(localStorage.getItem("user")) || {};
   if (!productdetails) return <p>🚀 جاري التحميل...</p>;
 
   return (
@@ -17,13 +19,18 @@ const InventoryItem = () => {
         <div className="flex gap-4">
           <button
             onClick={(e) => {
-              e.preventDefault();
-              console.log("Button Clicked!");
+              console.log(user.roles); // طباعة للتحقق من القيم
+              if (user?.roles?.includes("Vendor")) {
+                navigate("/vendor/editProduct");
+              } else {
+                navigate("/editproduct");
+              }
             }}
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
           >
             Edit Product
           </button>
+
           <button
             onClick={(e) => {
               e.preventDefault();

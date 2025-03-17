@@ -4,6 +4,7 @@ import {
   GET_ERROR,
   ADD_PRODUCT,
   REMOVE_PRODUCT,
+  EDIT_PRODUCT,
 } from "../type";
 import { getData } from "../../Hooks/useGetData";
 import {
@@ -11,6 +12,7 @@ import {
   useInsertDataWithImage,
 } from "../../Hooks/useInsertData";
 import useDeleteData from "../../Hooks/useDeleteData";
+import { useInsUpdateData } from "../../Hooks/useUpdateData";
 
 //create products with pagination
 export const createProduct = (data) => async (dispatch) => {
@@ -20,6 +22,27 @@ export const createProduct = (data) => async (dispatch) => {
 
     dispatch({
       type: ADD_PRODUCT,
+      payload: response,
+      loading: true,
+    });
+  } catch (e) {
+    dispatch({
+      type: GET_ERROR,
+      payload: "Error  " + e,
+    });
+  }
+};
+
+export const editProduct = (id, productData) => async (dispatch) => {
+  try {
+    const response = await useInsUpdateData(
+      `/api/Products?id=${id}`,
+      productData
+    );
+    console.log("PRODUCTS from edit action", response);
+
+    dispatch({
+      type: EDIT_PRODUCT,
       payload: response,
       loading: true,
     });

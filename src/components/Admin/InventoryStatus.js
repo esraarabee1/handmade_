@@ -2,6 +2,7 @@ import React from "react";
 import { FaPlus, FaBox, FaExclamationTriangle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 const InventoryStatus = () => {
+  const user = JSON.parse(localStorage.getItem("user")) || {};
   const navigate = useNavigate();
   return (
     <div className="bg-gray-100 ">
@@ -10,9 +11,12 @@ const InventoryStatus = () => {
         <h2 className="text-md font-semibold">Inventory Summary</h2>
         <button
           onClick={(e) => {
-            e.preventDefault();
-            console.log("Button Clicked!");
-            navigate("/addproduct");
+            console.log(user.roles); // طباعة للتحقق من القيم
+            if (user?.roles?.includes("Vendor")) {
+              navigate("/vendor/addProduct");
+            } else {
+              navigate("/addproduct");
+            }
           }}
           className="flex items-center gap-1 bg-blue-600 text-white px-3 py-1 text-sm rounded-lg hover:bg-blue-700"
         >

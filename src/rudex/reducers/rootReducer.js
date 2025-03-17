@@ -19,8 +19,8 @@ import addvendorReducer from "./../reducers/admin/addvendorReducer";
 import deleteprodReducer from "./../reducers/products/deleteprodReducer";
 import viewordersdataReducer from "./../reducers/admin/viewordersReducer";
 import oneorderReducer from "./../reducers/admin/oneorderReducer";
-import vendoritemReducer from "./../reducers/vendor/vendoritemReducer";
 import vendorordersReducer from "./../reducers/vendor/vendorordersReducer";
+import editprodReducer from "./../reducers/products/editprodReducer";
 
 const rootReducer = combineReducers({
   counter: counterReducer,
@@ -43,8 +43,8 @@ const rootReducer = combineReducers({
   deleteprodReducer: deleteprodReducer,
   viewordersdataReducer: viewordersdataReducer,
   oneorderReducer: oneorderReducer,
-  vendoritemReducer: vendoritemReducer,
   vendorordersReducer: vendorordersReducer,
+  editprodReducer: editprodReducer,
 });
 
 export default rootReducer;

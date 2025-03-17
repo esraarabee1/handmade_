@@ -14,6 +14,10 @@ import AdminviewItem from "./pages/Admin/AdminviewItem";
 import Adminvieworders from "./pages/Admin/Adminvieworders";
 import Vendorviewinventory from "./pages/Vendor/Vendorviewinventory";
 import Vendorvieworders from "./pages/Vendor/Vendorsvieworders";
+import VendorAddProdPage from "./pages/Vendor/Vendoraddprodpage";
+import VendorviewItem from "./pages/Vendor/VendorviewItem";
+import VendorEditProdPage from "./pages/Vendor/VendorEditProdPage";
+import AdminEditProdPage from "./pages/Admin/AdminEditprodpage";
 
 // تحميل الصفحات بشكل كسول
 const HomePage = React.lazy(() => import("./pages/Home/HomePage"));
@@ -66,6 +70,7 @@ function App() {
             />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/addproduct" element={<AdminaddProdPage />} />
+            <Route path="/editproduct" element={<AdminEditProdPage />} />
             <Route path="/inventory" element={<Adminviewinventory />} />
             <Route path="/viewvendors" element={<Adminviewvendors />} />
             <Route path="/addvendors" element={<Adminaddvendor />} />
@@ -74,6 +79,12 @@ function App() {
 
             <Route path="/vendor/inventory" element={<Vendorviewinventory />} />
             <Route path="/vendor/orders" element={<Vendorvieworders />} />
+            <Route path="/vendor/addProduct" element={<VendorAddProdPage />} />
+            <Route
+              path="/vendor/editProduct"
+              element={<VendorEditProdPage />}
+            />
+            <Route path="/vendor/items/:id" element={<VendorviewItem />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

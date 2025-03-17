@@ -3,7 +3,7 @@ import React from "react";
 import GetOrdersVendorHook from "../../Hook/Vendor/viewordersvendor-hook";
 
 const OrdersVendorTable = () => {
-  const [orders] = GetOrdersVendorHook();
+  const [orders, products] = GetOrdersVendorHook();
   return (
     <div className="flex-1 overflow-x-auto  bg-gray-100 min-h-screen">
       <table className="w-full bg-white shadow-md rounded-lg">

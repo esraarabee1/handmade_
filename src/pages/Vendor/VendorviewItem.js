@@ -1,11 +1,9 @@
 import React from "react";
-
+import InventoryItem from "../../components/Admin/InventoryItem";
 import DashHeader from "../../components/Admin/DashHeader";
-import InventoryStatus from "../../components/Admin/InventoryStatus";
 import VendorSideBar from "../../components/Vendor/VendorSideBar";
-import InventoryVendorTable from "../../components/Vendor/inventoryVendorTable";
 
-const Vendorviewinventory = () => {
+const VendorviewItem = () => {
   return (
     <div className="flex gap-4  min-h-screen bg-gray-100">
       {/* الشريط الجانبي */}
@@ -16,11 +14,10 @@ const Vendorviewinventory = () => {
       {/* المحتوى الرئيسي */}
       <div className="flex flex-col flex-1 gap-4">
         <DashHeader />
-        <InventoryStatus />
-        <InventoryVendorTable />
+        <InventoryItem />
       </div>
     </div>
   );
 };
 
-export default Vendorviewinventory;
+export default VendorviewItem;
