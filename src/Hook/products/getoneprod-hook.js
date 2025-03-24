@@ -13,9 +13,7 @@ const useOneProduct = (id) => {
     }
   }, [dispatch, id]);
 
-  const productdetails = useSelector(
-    (state) => state.productdetailsReducer?.product
-  );
+  const productdetails = useSelector((state) => state.addprodReducer?.product);
 
   console.log(" بيانات المنتج:", productdetails);
 

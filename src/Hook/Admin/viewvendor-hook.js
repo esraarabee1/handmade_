@@ -16,7 +16,7 @@ const GetVendorDataHook = () => {
     get();
   }, []);
   const allvendorsdata = useSelector(
-    (state) => state.viewvendorsdataReducer?.allvendors
+    (state) => state.addvendorReducer?.allvendors
   );
   useEffect(() => {
     if (loading === false) {

@@ -1,5 +1,4 @@
 import "./index.css";
-
 import React from "react";
 import ReactDOM from "react-dom/client"; // ✅ انتبه هنا!
 import { Provider } from "react-redux";

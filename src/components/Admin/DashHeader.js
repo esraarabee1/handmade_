@@ -5,12 +5,12 @@ const DashHeader = () => {
     <header className="bg-white shadow-md py-4 px-6 w-full">
       <div className="container mx-auto flex items-center justify-between">
         {/* Left Section */}
-        <div className="w-full md:w-auto">
+        <div className="">
           <span className="text-lg font-bold text-gray-700">Dashboard</span>
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center gap-4">
+        <div className="">
           <button className="bg-gray-100 text-gray-700 py-2 px-4 rounded-md flex items-center gap-2">
             Handmade
             <svg

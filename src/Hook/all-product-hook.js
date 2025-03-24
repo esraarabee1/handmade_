@@ -21,8 +21,8 @@ const AllProductHook = () => {
   const state = useSelector((state) => state);
   console.log("Redux State:", state);
 
-  const products = useSelector((state) => state.allProducts?.products);
-  const loading = useSelector((state) => state.allProducts?.loading);
+  const products = useSelector((state) => state.addprodReducer?.products);
+  const loading = useSelector((state) => state.addprodReducer?.loading);
 
   console.log("products Data:", products.data);
 

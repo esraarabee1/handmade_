@@ -16,7 +16,7 @@ const GetInventoryDataHook = () => {
     };
     get();
   }, []);
-  const alldata = useSelector((state) => state.viewitemsReducer?.allitems);
+  const alldata = useSelector((state) => state.addvendorReducer?.allitems);
   useEffect(() => {
     if (loading === false) {
       if (alldata) {

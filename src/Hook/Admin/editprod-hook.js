@@ -69,7 +69,7 @@ const EditProdHook = () => {
 
   //when image change save it
 
-  const res = useSelector((state) => state.editprodReducer?.editprod);
+  const res = useSelector((state) => state.addprodReducer?.editprod);
   console.log("editprod", res);
 
   const uploadImageToCloudinary = async (file) => {

@@ -13,7 +13,7 @@ const useDeleteProductHook = (id) => {
   };
 
   const productremoved = useSelector(
-    (state) => state.deleteprodReducer?.removedprod
+    (state) => state.addprodReducer?.removedprod
   );
 
   console.log("📌 prodremoved is:", productremoved);

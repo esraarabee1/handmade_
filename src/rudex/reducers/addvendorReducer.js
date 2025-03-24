@@ -1,7 +1,9 @@
-import { ADD_TO_VENDORS, GET_ERROR } from "../../type";
+import { ADD_TO_VENDORS, GET_All_VENDORS, GET_All_ITEMS } from "../type";
 
 const initialState = {
   addvendor: null,
+  allvendors: [],
+  allitems: [],
   loading: false,
   error: null,
 };
@@ -16,13 +18,10 @@ const addvendorReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case GET_ERROR:
-      return {
-        ...state,
-        addvendor: null,
-        loading: false,
-        error: action.payload,
-      };
+    case GET_All_VENDORS:
+      return { ...state, allvendors: action.payload, loading: false };
+    case GET_All_ITEMS:
+      return { ...state, allitems: action.payload, loading: false };
     default:
       return state;
   }

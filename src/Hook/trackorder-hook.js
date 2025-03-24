@@ -19,8 +19,8 @@ const useTrackorderHook = () => {
     setIsPress(false);
   };
 
-  const res = useSelector((state) => state.oneorderReducer.oneorders);
-  const loading = useSelector((state) => state.oneorderReducer.loading);
+  const res = useSelector((state) => state.vendorordersReducer.oneorders);
+  const loading = useSelector((state) => state.vendorordersReducer.loading);
 
   useEffect(() => {
     if (!loading && res) {

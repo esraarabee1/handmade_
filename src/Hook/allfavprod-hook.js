@@ -25,8 +25,7 @@ const AllfavproductHook = () => {
   }, [dispatch, userID]);
 
   const favproducts =
-    useSelector((state) => state.getfavReducer?.favprods) || [];
-  const loading = useSelector((state) => state.getfavReducer?.loading);
+    useSelector((state) => state.addtowishReducer?.favprods) || [];
 
   console.log(" favProducts Data:", favproducts);
 

@@ -11,7 +11,7 @@ const InventoryStatus = () => {
         <h2 className="text-md font-semibold">Inventory Summary</h2>
         <button
           onClick={(e) => {
-            console.log(user.roles); // طباعة للتحقق من القيم
+            console.log(user.roles);
             if (user?.roles?.includes("Vendor")) {
               navigate("/vendor/addProduct");
             } else {

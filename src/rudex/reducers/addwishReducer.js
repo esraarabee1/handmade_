@@ -1,9 +1,9 @@
-import { ADD_TO_WISH, GET_ERROR } from "../../type";
+import { ADD_TO_WISH, GET_ALL_FAV, REMOVE_FROM_WISHLIST } from "../type";
 
 const initialState = {
   addtowish: null,
-  loading: false,
-  error: null,
+  favprods: [],
+  removewish: null,
 };
 
 const addtowishReducer = (state = initialState, action) => {
@@ -16,12 +16,19 @@ const addtowishReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case GET_ERROR:
+    case GET_ALL_FAV:
+      console.log("Reducer Updated:", action.payload);
       return {
         ...state,
-        addtowish: null,
+        favprods: action.payload,
         loading: false,
-        error: action.payload,
+      };
+    case REMOVE_FROM_WISHLIST:
+      return {
+        ...state,
+        removewish: action.payload,
+        loading: false,
+        error: null,
       };
     default:
       return state;

@@ -46,7 +46,7 @@ const useWishlistHook = (item, favProd = []) => {
   }, [isFav]);
 
   const resAdd = useSelector((state) => state.addtowishReducer.addtowish);
-  const resRemove = useSelector((state) => state.removewishReducer.removewish);
+  const resRemove = useSelector((state) => state.addtowishReducer.removewish);
 
   const addToWishListData = async () => {
     if (!userID) {

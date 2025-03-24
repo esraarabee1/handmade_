@@ -16,7 +16,7 @@ const GetOrdersDataHook = () => {
     get();
   }, []);
   const allorsersdata = useSelector(
-    (state) => state.viewordersdataReducer?.allorders
+    (state) => state.vendorordersReducer?.allorders
   );
   useEffect(() => {
     if (loading === false) {

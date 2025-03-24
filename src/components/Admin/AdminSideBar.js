@@ -56,7 +56,7 @@ const AdminSideBar = () => {
                 : "hover:bg-gray-100"
             }`}
           >
-            <span className="text-2xl">{link.icon}</span> {/* الأيقونة */}
+            <span className="text-2xl">{link.icon}</span>
             <span>{link.name}</span>
           </Link>
         ))}
