@@ -137,7 +137,7 @@ const EditProdHook = () => {
     };
 
     console.log(" البيانات المرسلة :", productData);
-    await dispatch(editProduct(90, productData));
+    await dispatch(editProduct(94, productData));
 
     setLoading(false);
   };

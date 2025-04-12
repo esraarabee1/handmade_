@@ -8,7 +8,6 @@ import AdminDashboard from "./pages/Admin/AdminDashboard";
 import AdminaddProdPage from "./pages/Admin/Adminaddprodpage";
 import Adminviewinventory from "./pages/Admin/Adminviewinventory";
 import Adminviewvendors from "./pages/Admin/Adminviewvendors";
-import Adminaddvendor from "./pages/Admin/Adminaddvendor";
 import InventoryItem from "./components/Admin/InventoryItem";
 import AdminviewItem from "./pages/Admin/AdminviewItem";
 import Adminvieworders from "./pages/Admin/Adminvieworders";
@@ -73,7 +72,7 @@ function App() {
             <Route path="/editproduct" element={<AdminEditProdPage />} />
             <Route path="/inventory" element={<Adminviewinventory />} />
             <Route path="/viewvendors" element={<Adminviewvendors />} />
-            <Route path="/addvendors" element={<Adminaddvendor />} />
+
             <Route path="/items/:id" element={<AdminviewItem />} />
             <Route path="/admin/orders" element={<Adminvieworders />} />
 

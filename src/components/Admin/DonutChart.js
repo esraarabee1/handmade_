@@ -33,7 +33,7 @@ const DonutChart = () => {
 
       {/* Chart */}
       <div className="flex justify-center">
-        <Chart options={options} series={series} type="donut" width="250" />
+        <Chart options={options} series={series} type="donut" width="320" />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const GetOrdersVendorHook = () => {
   useEffect(() => {
     const get = async () => {
       setLoading(true);
-      await dispatch(getAllordersvendor(9));
+      await dispatch(getAllordersvendor(userId));
       setLoading(false);
     };
     get();
