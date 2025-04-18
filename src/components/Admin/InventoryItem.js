@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import useOneProduct from "../../Hook/products/getoneprod-hook";
@@ -9,6 +9,7 @@ const InventoryItem = () => {
   const { id } = useParams();
   const { productdetails } = useOneProduct(id);
   const { onSubmit, isPress } = useDeleteProductHook(id);
+
   const user = JSON.parse(localStorage.getItem("user")) || {};
   if (!productdetails) return <p>🚀 جاري التحميل...</p>;
 
@@ -21,9 +22,9 @@ const InventoryItem = () => {
             onClick={(e) => {
               console.log(user.roles); // طباعة للتحقق من القيم
               if (user?.roles?.includes("Vendor")) {
-                navigate("/vendor/editProduct");
+                navigate(`/vendor/editProduct/${id}`);
               } else {
-                navigate("/editproduct");
+                navigate(`/editproduct/${id}`);
               }
             }}
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"

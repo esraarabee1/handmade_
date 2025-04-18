@@ -69,7 +69,7 @@ function App() {
             />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/addproduct" element={<AdminaddProdPage />} />
-            <Route path="/editproduct" element={<AdminEditProdPage />} />
+            <Route path="/editproduct/:id" element={<AdminEditProdPage />} />
             <Route path="/inventory" element={<Adminviewinventory />} />
             <Route path="/viewvendors" element={<Adminviewvendors />} />
 
@@ -80,7 +80,7 @@ function App() {
             <Route path="/vendor/orders" element={<Vendorvieworders />} />
             <Route path="/vendor/addProduct" element={<VendorAddProdPage />} />
             <Route
-              path="/vendor/editProduct"
+              path="/vendor/editProduct/:id"
               element={<VendorEditProdPage />}
             />
             <Route path="/vendor/items/:id" element={<VendorviewItem />} />

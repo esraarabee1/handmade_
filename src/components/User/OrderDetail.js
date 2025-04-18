@@ -44,7 +44,7 @@ const OrderDetail = () => {
         <div className="flex flex-col">
           <h4 className="text-gray-600 text-sm">Delivery Company</h4>
           <span className="font-semibold">
-            {res.deliveryCompany ? res.deliveryCompany : ""}
+            {res.deliveryCompany ? res.deliveryCompany : "Aramex"}
           </span>
         </div>
         <div className="flex flex-col">

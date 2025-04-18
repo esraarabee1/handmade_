@@ -21,3 +21,5 @@ export const GET_ONE_ORDER = "GET_ONE_ORDER";
 export const GET_All_INVENTORY = "GET_All_INVENTORY";
 export const GET_All_ORDERS_VENDOR = "GET_All_ORDERS_VENDOR";
 export const EDIT_PRODUCT = "EDIT_PRODUCT";
+export const GET_ONE_USERS = "GET_ONE_USERS";
+export const CREATE_ORDER = "CREATE_ORDER";

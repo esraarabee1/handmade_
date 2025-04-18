@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import prod from "../../images/prod.png";
 import { editProduct } from "../../rudex/actions/productActions";
+import { useParams } from "react-router-dom";
 
 const EditProdHook = () => {
+  const { id } = useParams();
   const dispatch = useDispatch();
   const [img, setImg] = useState(prod);
   const [name, setName] = useState("");
@@ -17,7 +19,9 @@ const EditProdHook = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isPress, setIsPress] = useState(false);
-
+  useEffect(() => {
+    console.log("xxxxxxxx", id);
+  }, [id]);
   //to change name state
   const onChangeName = (event) => {
     setName(event.target.value.trim());
@@ -137,7 +141,8 @@ const EditProdHook = () => {
     };
 
     console.log(" البيانات المرسلة :", productData);
-    await dispatch(editProduct(94, productData));
+
+    await dispatch(editProduct(id, productData));
 
     setLoading(false);
   };

@@ -26,13 +26,13 @@ const AddToCartHook = () => {
 
   useEffect(() => {
     if (!loading && res?.data) {
-      console.log(" Added to cart:", res.data);
+      console.log("Added to cart:", res.data);
 
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
       const existingProduct = cart.find((item) => item.id === res.data.id);
       if (existingProduct) {
-        existingProduct.qty += 1; // زيادة الكمية إذا كان المنتج موجودًا
+        existingProduct.qty += 1;
       } else {
         cart.push({
           id: res.data.id,
@@ -45,8 +45,22 @@ const AddToCartHook = () => {
         });
       }
 
-      // حفظ البيانات الجديدة في `localStorage`
       localStorage.setItem("cart", JSON.stringify(cart));
+
+      // ✅ إضافة نسخة مختصرة id + qty فقط
+      let shortCart = JSON.parse(localStorage.getItem("shortCart")) || [];
+
+      const existingShort = shortCart.find((item) => item.id === res.data.id);
+      if (existingShort) {
+        existingShort.qty += 1;
+      } else {
+        shortCart.push({
+          id: res.data.id,
+          qty: 1,
+        });
+      }
+
+      localStorage.setItem("shortCart", JSON.stringify(shortCart));
     }
   }, [loading, res]);
 

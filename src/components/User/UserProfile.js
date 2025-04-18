@@ -1,7 +1,9 @@
 import React from "react";
 import { Mail } from "lucide-react";
+import UserdataHook from "../../Hook/user-data-hook";
 
 const UserProfile = () => {
+  const [userdata, loading] = UserdataHook();
   return (
     <div className="max-w-screen mx-auto min-h-screen">
       <div className="bg-white p-6 ">
@@ -15,76 +17,44 @@ const UserProfile = () => {
               />
             </div>
             <div>
-              <h2 className="text-xl font-semibold">Mahmoud Alaa</h2>
-              <p className="text-gray-500">MahmoudAlaa.w@gmail.com</p>
+              <h2 className="text-xl font-semibold">
+                {userdata ? userdata.userName : "no data"}
+              </h2>
+              <p className="text-gray-500">
+                {userdata ? userdata.email : "no data"}
+              </p>
             </div>
           </div>
 
-          <button className=" bg-blue-500 text-white px-4 py-2 rounded-lg">
+          <button className=" bg-blue-500 text-white px-4 py-2 rounded-lg hidden">
             Edit
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-4 mt-6">
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Full Name
+              First Name
             </label>
-            <input
-              type="text"
-              placeholder="Your First Name"
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            />
+            <p className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm  focus:ring-blue-500 focus:border-blue-500">
+              {userdata ? userdata.fName : "no data"}
+            </p>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Nick Name
+              Last Name
             </label>
-            <input
-              type="text"
-              placeholder="Your First Name"
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            />
+            <p className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm  focus:ring-blue-500 focus:border-blue-500">
+              {userdata ? userdata.lName : "no data"}
+            </p>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Gender
+              Phone Number
             </label>
-            <select className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-              <option>Select Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Country
-            </label>
-            <select className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-              <option>Select Country</option>
-              <option value="egypt">Egypt</option>
-              <option value="usa">USA</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Language
-            </label>
-            <select className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-              <option>Select Language</option>
-              <option value="english">English</option>
-              <option value="arabic">Arabic</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Time Zone
-            </label>
-            <select className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-              <option>Select Time Zone</option>
-              <option value="gmt">GMT</option>
-              <option value="est">EST</option>
-            </select>
+            <p className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm  focus:ring-blue-500 focus:border-blue-500">
+              {userdata ? userdata.phone : "no data"}
+            </p>
           </div>
         </div>
       </div>

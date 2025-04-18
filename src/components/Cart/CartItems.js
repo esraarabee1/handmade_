@@ -2,10 +2,11 @@ import React from "react";
 import ProductCart from "./ProductCart";
 import Breadcrumb from "../Uitily/Breadcrumb";
 import GetAllUserCartHook from "../../Hook/cart/getallcart-hook";
+import CreateOrderHook from "../../Hook/createorder-hook";
 
 const CartItems = () => {
   const [cartItems] = GetAllUserCartHook();
-
+  const [onSubmit, res] = CreateOrderHook();
   const totalPrice = cartItems
     ? cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     : 0;
@@ -13,7 +14,7 @@ const CartItems = () => {
   const shippingCost = 10.0;
 
   const totalAmount = totalPrice + shippingCost;
-
+  localStorage.setItem("totalAmount", JSON.stringify(totalAmount));
   return (
     <div className="">
       <div className="mb-4">
@@ -64,7 +65,10 @@ const CartItems = () => {
               </div>
             </div>
 
-            <button className="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition">
+            <button
+              onClick={onSubmit}
+              className="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition"
+            >
               Go to Checkout
             </button>
           </div>

@@ -12,16 +12,18 @@ import getcartReducer from "./../reducers/cart/getallcartReducer";
 import addprodReducer from "./../reducers/addprodReducer";
 import addvendorReducer from "./../reducers/addvendorReducer";
 import vendorordersReducer from "./../reducers/vendorordersReducer";
+import userdataReducer from "./../reducers/userdataReducer";
+import createorderReducer from "./../reducers/createorserReducer";
 
 const rootReducer = combineReducers({
   allCategory: categoryReducer,
   allBrands: brandReducer,
-
+  userdataReducer: userdataReducer,
   authReducer: authReducer,
   authloginReducer: authloginReducer,
   allUsersReducer: allUsersReducer,
   addtowishReducer: addtowishReducer,
-
+  createorderReducer: createorderReducer,
   cartReducer: cartReducer,
   getcartReducer: getcartReducer,
 
