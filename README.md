@@ -59,6 +59,20 @@
 
 We use **Redux** for centralized state management across the application. This makes it easier to share and update data between different components in the app.
 
+## 📸 Preview
+
+![Header and Home](src/images/home.png)
+
+![Section](src/images/cart.png)
+
+![Section](src/images/sales.png)
+
+![Footer](src/images/traders.png)
+
+![Section](src/images/addvendor.png)
+
+![Section](src/images/addprod.png)
+
 # 1. Clone the project
 
 git clone https://github.com/esraarabee1/handmade_.git

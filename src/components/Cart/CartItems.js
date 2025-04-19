@@ -16,7 +16,7 @@ const CartItems = () => {
   const totalAmount = totalPrice + shippingCost;
   localStorage.setItem("totalAmount", JSON.stringify(totalAmount));
   return (
-    <div className="">
+    <div className="mb-4">
       <div className="mb-4">
         <Breadcrumb />
         <h3 className="text-2xl font-semibold mt-4">Your Cart</h3>

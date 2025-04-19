@@ -14,20 +14,22 @@ const AllProductContainer = () => {
       </div>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-2">
         {products.data ? (
-          products.data.map((item) => (
-            <ProductCard
-              key={item.id}
-              category={item.thumbImage}
-              discount="10%"
-              productName={item.name}
-              currentPrice={item.price}
-              originalPrice="$1000"
-              savings={item.offerPrice}
-              item={item.id}
-              favProdIds={favProd}
-              favProdUandProdId={favproducts}
-            />
-          ))
+          products.data
+            .slice(0, 10)
+            .map((item) => (
+              <ProductCard
+                key={item.id}
+                category={item.thumbImage}
+                discount="10%"
+                productName={item.name}
+                currentPrice={item.price}
+                originalPrice="$1000"
+                savings={item.offerPrice}
+                item={item.id}
+                favProdIds={favProd}
+                favProdUandProdId={favproducts}
+              />
+            ))
         ) : (
           <h4>No data</h4>
         )}
