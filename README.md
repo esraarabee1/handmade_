@@ -62,6 +62,7 @@ We use **Redux** for centralized state management across the application. This m
 # 1. Clone the project
 
 git clone https://github.com/esraarabee1/handmade_.git
+
 cd handmade\_
 
 # 2. Install dependencies
