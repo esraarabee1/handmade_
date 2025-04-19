@@ -15,7 +15,7 @@ const InventoryItem = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-4 pr-4">
+      <div className="flex justify-between items-center mb-4 ">
         <h2 className="text-lg font-semibold">{productdetails.name}</h2>
         <div className="flex gap-4">
           <button
@@ -46,7 +46,7 @@ const InventoryItem = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-4 pr-4 bg-gray-100 ">
+      <div className="flex items-center gap-4  bg-gray-100 ">
         <div className="w-40 h-40 flex-shrink-0 bg-white p-4 shadow-md rounded-lg">
           <img
             src={productdetails.thumbImage}

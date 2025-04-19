@@ -5,10 +5,10 @@ const InventoryStatus = () => {
   const user = JSON.parse(localStorage.getItem("user")) || {};
   const navigate = useNavigate();
   return (
-    <div className="bg-gray-100 ">
+    <div className="bg-gray-100  ">
       {/* Header */}
       <div className="flex justify-between items-center mb-3">
-        <h2 className="text-md font-semibold">Inventory Summary</h2>
+        <h2 className="text-lg font-semibold">Inventory Summary</h2>
         <button
           onClick={(e) => {
             console.log(user.roles);
@@ -18,7 +18,7 @@ const InventoryStatus = () => {
               navigate("/addproduct");
             }
           }}
-          className="flex items-center gap-1 bg-blue-600 text-white px-3 py-1 text-sm rounded-lg hover:bg-blue-700"
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center gap-2"
         >
           <FaPlus size={12} /> Add Product
         </button>

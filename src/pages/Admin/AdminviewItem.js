@@ -5,7 +5,7 @@ import DashHeader from "../../components/Admin/DashHeader";
 
 const AdminviewItem = () => {
   return (
-    <div className="flex gap-4  min-h-screen bg-gray-100">
+    <div className="flex   min-h-screen bg-gray-100">
       {/* الشريط الجانبي */}
       <div className="bg-white shadow-lg rounded-lg">
         <AdminSideBar />
@@ -14,7 +14,9 @@ const AdminviewItem = () => {
       {/* المحتوى الرئيسي */}
       <div className="flex flex-col flex-1 gap-4">
         <DashHeader />
-        <InventoryItem />
+        <div className="pl-4 pr-4">
+          <InventoryItem />
+        </div>
       </div>
     </div>
   );

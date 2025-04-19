@@ -10,7 +10,7 @@ const OrdersTable = () => {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
   return (
-    <div className="flex-1 overflow-x-auto  bg-gray-100 min-h-screen">
+    <div className="flex-1 overflow-x-auto  bg-gray-100 min-h-screen ">
       <table className="w-full bg-white shadow-md rounded-lg">
         <thead>
           <tr className="border-b ">

@@ -48,7 +48,9 @@ const VendorStatus = () => {
             <div className="flex items-center justify-center fixed inset-0 z-50 bg-gray-500 bg-opacity-50 overflow-y-auto">
               <div className="w-11/12 max-w-lg border bg-white rounded-lg shadow-xl max-h-[90vh] overflow-y-auto">
                 <div className="flex flex-row justify-between p-5  rounded-t-lg">
-                  <h3 className="text-black text-3xl">Add New Vendor</h3>
+                  <h3 className="text-black text-center font-medium text-[20px] leading-normal ">
+                    Add a New Trader
+                  </h3>
                   <button
                     className="text-black text-3xl leading-none block"
                     onClick={() => setAddModal(false)}
@@ -185,7 +187,7 @@ const VendorStatus = () => {
                         OnSubmit();
                       }}
                       type="submit"
-                      className="px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm"
+                      className="flex w-[180px] text-white px-4 py-[10px] justify-center items-center gap-[10px] rounded-[12px] bg-[#008ECC]"
                     >
                       Add
                     </button>

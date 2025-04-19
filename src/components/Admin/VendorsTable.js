@@ -4,7 +4,7 @@ import GetVendorDataHook from "../../Hook/Admin/viewvendor-hook";
 const VendorsTable = () => {
   const [vendors] = GetVendorDataHook();
   return (
-    <div className="flex-1 overflow-x-auto  bg-gray-100 min-h-screen">
+    <div className="flex-1 overflow-x-auto  bg-gray-100 min-h-screen ">
       <table className="w-full bg-white shadow-md rounded-lg">
         <thead>
           <tr className="border-b ">

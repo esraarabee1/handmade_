@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const OrderStatus = () => {
   const navigate = useNavigate();
   return (
-    <div className="rounded-lg ">
+    <div className="rounded-lg">
       <div className="mb-4">
         <h2 className="text-lg font-semibold">Orders Summary</h2>
       </div>

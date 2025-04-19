@@ -1,24 +1,8 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBarLogin from "./components/Uitily/NavBarLogin";
-import Footer from "./components/Uitily/Footer";
 import "./App.css";
-import UserProfilePage from "./pages/User/UserProfilePage";
-import AdminDashboard from "./pages/Admin/AdminDashboard";
-import AdminaddProdPage from "./pages/Admin/Adminaddprodpage";
-import Adminviewinventory from "./pages/Admin/Adminviewinventory";
-import Adminviewvendors from "./pages/Admin/Adminviewvendors";
-import InventoryItem from "./components/Admin/InventoryItem";
-import AdminviewItem from "./pages/Admin/AdminviewItem";
-import Adminvieworders from "./pages/Admin/Adminvieworders";
-import Vendorviewinventory from "./pages/Vendor/Vendorviewinventory";
-import Vendorvieworders from "./pages/Vendor/Vendorsvieworders";
-import VendorAddProdPage from "./pages/Vendor/Vendoraddprodpage";
-import VendorviewItem from "./pages/Vendor/VendorviewItem";
-import VendorEditProdPage from "./pages/Vendor/VendorEditProdPage";
-import AdminEditProdPage from "./pages/Admin/AdminEditprodpage";
 
-// تحميل الصفحات بشكل كسول
+// lazy loading
 const HomePage = React.lazy(() => import("./pages/Home/HomePage"));
 const LoginPage = React.lazy(() => import("./pages/Auth/LoginPage"));
 const RegisterPage = React.lazy(() => import("./pages/Auth/RegisterPage"));
@@ -40,12 +24,51 @@ const UserWhishlistPage = React.lazy(() =>
 const UserTrackOrderPage = React.lazy(() =>
   import("./pages/User/UserTrackOrderPage")
 );
+const UserProfilePage = React.lazy(() =>
+  import("./pages/User/UserProfilePage")
+);
+
+// (Admin)
+const AdminDashboard = React.lazy(() => import("./pages/Admin/AdminDashboard"));
+const AdminaddProdPage = React.lazy(() =>
+  import("./pages/Admin/Adminaddprodpage")
+);
+const AdminEditProdPage = React.lazy(() =>
+  import("./pages/Admin/AdminEditprodpage")
+);
+const Adminviewinventory = React.lazy(() =>
+  import("./pages/Admin/Adminviewinventory")
+);
+const Adminviewvendors = React.lazy(() =>
+  import("./pages/Admin/Adminviewvendors")
+);
+const AdminviewItem = React.lazy(() => import("./pages/Admin/AdminviewItem"));
+const Adminvieworders = React.lazy(() =>
+  import("./pages/Admin/Adminvieworders")
+);
+
+//  (Vendor)
+const Vendorviewinventory = React.lazy(() =>
+  import("./pages/Vendor/Vendorviewinventory")
+);
+const Vendorvieworders = React.lazy(() =>
+  import("./pages/Vendor/Vendorsvieworders")
+);
+const VendorAddProdPage = React.lazy(() =>
+  import("./pages/Vendor/Vendoraddprodpage")
+);
+const VendorviewItem = React.lazy(() =>
+  import("./pages/Vendor/VendorviewItem")
+);
+const VendorEditProdPage = React.lazy(() =>
+  import("./pages/Vendor/VendorEditProdPage")
+);
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* Suspense لعرض رسالة تحميل أثناء تحميل الصفحات */}
+        {/* Suspense */}
         <Suspense fallback={<div className="spinner"></div>}>
           <Routes>
             <Route index element={<HomePage />} />
@@ -61,18 +84,17 @@ function App() {
               path="/user/UserWhishlistPage"
               element={<UserWhishlistPage />}
             />
-
             <Route path="/user/UserProfilePage" element={<UserProfilePage />} />
             <Route
               path="/user/UserTrackOrderPage"
               element={<UserTrackOrderPage />}
             />
+
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/addproduct" element={<AdminaddProdPage />} />
             <Route path="/editproduct/:id" element={<AdminEditProdPage />} />
             <Route path="/inventory" element={<Adminviewinventory />} />
             <Route path="/viewvendors" element={<Adminviewvendors />} />
-
             <Route path="/items/:id" element={<AdminviewItem />} />
             <Route path="/admin/orders" element={<Adminvieworders />} />
 

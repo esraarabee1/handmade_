@@ -7,7 +7,7 @@ const UserWhishlistContainer = () => {
 
   return (
     <div className="flex flex-col container mx-auto">
-      <h2 className="text-primary font-clash text-2xl font-semibold leading-[42px] ">
+      <h2 className="text-primary font-clash text-2xl font-semibold leading-[42px] text-center p-4 ">
         Wishlist
       </h2>
 

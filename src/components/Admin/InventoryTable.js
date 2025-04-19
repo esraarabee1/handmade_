@@ -7,8 +7,8 @@ const InventoryTable = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex-1 overflow-x-auto bg-gray-100 min-h-screen">
-      <table className="w-full bg-white shadow-md rounded-lg">
+    <div className="flex-1 overflow-x-auto bg-gray-100 min-h-screen  ">
+      <table className="w-full bg-white shadow-md rounded-lg ">
         <thead>
           <tr className="border-b">
             <th className="p-3 text-left"></th>
