@@ -185,7 +185,10 @@ const Navbar = () => {
               >
                 Track Order
               </a>
-              <a href="/products" className="text-gray-600 hover:text-gray-900">
+              <a
+                href="/products"
+                className="text-gray-600 hover:text-gray-900 "
+              >
                 All Offers
               </a>
               <a
@@ -223,7 +226,7 @@ const Navbar = () => {
                   )}
                   <button
                     onClick={logOut}
-                    className="block text-gray-700 hover:text-gray-900 mt-2"
+                    className=" text-gray-700 hover:text-gray-900 mt-2 text-center"
                   >
                     Logout
                   </button>

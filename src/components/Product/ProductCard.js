@@ -55,12 +55,14 @@ const Card = ({
         </Link>
       </div>
       {/* Content */}
-      <div className="w-[275.551px] h-[120px] rounded-b-[15px] bg-white pl-4 pr-4 flex flex-col justify-center">
+      <div className="max-w-[275.551px] h-[120px] rounded-b-[15px] bg-white pl-4 pr-4 flex flex-col justify-center">
         <div className="flex flex-col pb-2 gap-2">
-          <h3 className="text-lg font-semibold text-gray-800">{productName}</h3>
+          <h3 className="text-lg font-semibold text-gray-800 truncate overflow-hidden whitespace-nowrap w-[180px]">
+            {productName}
+          </h3>
           <div className="flex items-baseline gap-2">
             <span className="text-xl font-bold text-gray-800">
-              ${currentPrice}
+              ${currentPrice.toFixed(2)}
             </span>
             <span className="text-sm line-through text-gray-500">
               ${originalPrice}

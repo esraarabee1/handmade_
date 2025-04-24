@@ -7,7 +7,7 @@ const slides = [
   {
     title: "Wear Art, Wear You",
     subtitle: "Discover Unique Handmade Treasures for Your Journey!",
-    promotion: "UP to 80% OFF",
+    promotion: "UP to 10% OFF",
     image: imghero,
   },
   {
