@@ -20,7 +20,7 @@ const Card = ({
     useWishlistHook(item, favProdIds || []);
   return (
     <div
-      className={` flex flex-col gap-6 w-[278px] h-[350px] bg-[#F5F5F5] rounded-[16px] border border-transparent shadow-[0px_10px_1px_rgba(183,183,183,0.10),0px_97px_39px_rgba(0,0,0,0.01),0px_54px_33px_rgba(0,0,0,0.03),0px_24px_24px_rgba(0,0,0,0.04),0px_6px_13px_rgba(0,0,0,0.05),0px_0px_0px_rgba(0,0,0,0.05)] relative ${className}`}
+      className={` flex flex-col gap-6 max-w-[278px] max-h-[350px] bg-[#F5F5F5] rounded-[16px] border border-transparent shadow-[0px_10px_1px_rgba(183,183,183,0.10),0px_97px_39px_rgba(0,0,0,0.01),0px_54px_33px_rgba(0,0,0,0.03),0px_24px_24px_rgba(0,0,0,0.04),0px_6px_13px_rgba(0,0,0,0.05),0px_0px_0px_rgba(0,0,0,0.05)] relative ${className}`}
     >
       <div>
         {/* Header */}

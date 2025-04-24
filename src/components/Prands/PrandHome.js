@@ -8,7 +8,7 @@ const PrandHome = ({ title, btntitle, pathText }) => {
   return (
     <div className="container mx-auto px-4">
       <SubTiltle title={title} btntitle={btntitle} pathText={pathText} />
-      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="my-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {loading === false ? (
           brands.data ? (
             brands.data.slice(0, 4).map((item) => {

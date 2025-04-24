@@ -9,7 +9,7 @@ const CategoryContainer = () => {
   return (
     <div className="container mx-auto p-4">
       <div className="text-lg font-bold mb-4">Shop From Top Categories </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {category.data ? (
           category.data.slice(0, 10).map((item) => {
             return (

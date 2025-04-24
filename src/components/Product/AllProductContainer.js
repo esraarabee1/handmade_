@@ -12,7 +12,7 @@ const AllProductContainer = () => {
       <div className="text-lg font-bold mb-4">
         Grab the best deal on Jewelry & Accessories
       </div>
-      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-2">
+      <div className=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-2">
         {products.data ? (
           products.data
             .slice(0, 10)
