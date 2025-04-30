@@ -16,7 +16,9 @@ const InventoryItem = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-4 ">
-        <h2 className="text-lg font-semibold">{productdetails.name}</h2>
+        <h2 className="text-lg font-semibold truncate overflow-hidden whitespace-nowrap w-[180px]">
+          {productdetails.name}
+        </h2>
         <div className="flex gap-4">
           <button
             onClick={(e) => {
@@ -68,7 +70,9 @@ const InventoryItem = () => {
           <div className="flex justify-between">
             <div>
               <p className="text-sm text-gray-500">Price</p>
-              <p className="text-lg font-semibold">${productdetails.price}</p>
+              <p className="text-lg font-semibold">
+                ${productdetails.price.toFixed(2)}
+              </p>
             </div>
             <div className="text-right">
               <p className="text-sm text-gray-500">In-Stock</p>

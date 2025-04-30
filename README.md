@@ -69,6 +69,8 @@ We use **Redux** for centralized state management across the application. This m
 
 ![Section](src/images/orders.png)
 
+![Section](src/images/viewitem.png)
+
 ![Footer](src/images/traders.png)
 
 ![Section](src/images/addvendor.png)
