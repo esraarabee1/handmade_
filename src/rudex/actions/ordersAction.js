@@ -3,12 +3,14 @@ import {
   GET_All_ORDERS,
   GET_ERROR,
   GET_ONE_ORDER,
+  UPDATE_ONE_ORDER,
 } from "../type";
 import { getData, useGetDataToken } from "../../Hooks/useGetData";
 import {
   useInsertData,
   useInsertDataWithImage,
 } from "../../Hooks/useInsertData";
+import { inUpdateData } from "../../Hooks/useUpdateData";
 
 export const getAllorders = () => async (dispatch) => {
   try {
@@ -56,6 +58,24 @@ export const createOrder = (data) => async (dispatch) => {
     dispatch({
       type: GET_ERROR,
       payload: "Error  " + e,
+    });
+  }
+};
+
+export const UpdateOrder = (id, data) => async (dispatch) => {
+  try {
+    const response = await inUpdateData(`/api/Orders?id=${id}`, data);
+    console.log("order from update order action", response);
+
+    dispatch({
+      type: UPDATE_ONE_ORDER,
+      payload: response,
+      loading: true,
+    });
+  } catch (e) {
+    dispatch({
+      type: GET_ERROR,
+      payload: "Error " + e,
     });
   }
 };

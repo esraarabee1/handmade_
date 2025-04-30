@@ -27,7 +27,7 @@ const GetOrdersDataHook = () => {
     }
   }, [loading]);
 
-  return [orders];
+  return [orders, setOrders];
 };
 
 export default GetOrdersDataHook;

@@ -21,7 +21,7 @@ const AdminSideBar = () => {
   ];
 
   return (
-    <div className="h-screen w-[296px] bg-white text-black  flex flex-col shadow-lg">
+    <div className="h-screen w-[296px] bg-white text-black  flex flex-col shadow-lg ">
       {/* Logo */}
       <div className="flex gap-4 items-center p-6 text-2xl font-bold text-center text-black">
         <svg

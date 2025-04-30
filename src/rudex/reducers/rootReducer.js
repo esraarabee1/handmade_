@@ -14,6 +14,7 @@ import addvendorReducer from "./../reducers/addvendorReducer";
 import vendorordersReducer from "./../reducers/vendorordersReducer";
 import userdataReducer from "./../reducers/userdataReducer";
 import createorderReducer from "./../reducers/createorserReducer";
+import orderReducer from "./../reducers/orderReducer";
 
 const rootReducer = combineReducers({
   allCategory: categoryReducer,
@@ -26,7 +27,7 @@ const rootReducer = combineReducers({
   createorderReducer: createorderReducer,
   cartReducer: cartReducer,
   getcartReducer: getcartReducer,
-
+  orderReducer: orderReducer,
   addprodReducer: addprodReducer,
 
   addvendorReducer: addvendorReducer,

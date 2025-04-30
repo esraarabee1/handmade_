@@ -12,7 +12,7 @@ import {
   useInsertDataWithImage,
 } from "../../Hooks/useInsertData";
 import useDeleteData from "../../Hooks/useDeleteData";
-import { useInsUpdateData } from "../../Hooks/useUpdateData";
+import { inUpdateData } from "../../Hooks/useUpdateData";
 
 //create products with pagination
 export const createProduct = (data) => async (dispatch) => {
@@ -35,10 +35,7 @@ export const createProduct = (data) => async (dispatch) => {
 
 export const editProduct = (id, productData) => async (dispatch) => {
   try {
-    const response = await useInsUpdateData(
-      `/api/Products?id=${id}`,
-      productData
-    );
+    const response = await inUpdateData(`/api/Products?id=${id}`, productData);
     console.log("PRODUCTS from edit action", response);
 
     dispatch({

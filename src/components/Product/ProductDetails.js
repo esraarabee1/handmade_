@@ -4,8 +4,8 @@ import ProductImageGallery from "./ProductImageGallery";
 
 const ProductDetails = () => {
   return (
-    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 items-center p-4">
-      <div className="flex justify-center ">
+    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2  items-center p-4">
+      <div className="flex justify-center  ">
         <ProductImageGallery />
       </div>
 
