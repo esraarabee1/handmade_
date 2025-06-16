@@ -16,6 +16,8 @@ const VendorStatus = () => {
     rolID,
     banner,
     description,
+    address,
+    stripeID,
     onChangeName,
     onChangeLastName,
     onChangeEmail,
@@ -27,6 +29,8 @@ const VendorStatus = () => {
     OnSubmit,
     onChangeBanner,
     onChangeDescription,
+    onChangeAddress,
+    onChangeStripeID,
   ] = AddvendorHook();
   return (
     <div className="rounded-lg ">
@@ -157,13 +161,25 @@ const VendorStatus = () => {
                   </div>
                   <div>
                     <label className="block text-xs font-medium text-gray-700">
+                      stripe ID
+                    </label>
+                    <input
+                      value={stripeID}
+                      onChange={onChangeStripeID}
+                      type="text"
+                      placeholder="stripe ID"
+                      className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-gray-700">
                       Banner
                     </label>
                     <input
                       value={banner}
                       onChange={onChangeBanner}
                       type="text"
-                      placeholder="Role ID"
+                      placeholder="banner"
                       className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
                     />
                   </div>
@@ -175,7 +191,19 @@ const VendorStatus = () => {
                       value={description}
                       onChange={onChangeDescription}
                       type="text"
-                      placeholder="Role ID"
+                      placeholder="description"
+                      className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-gray-700">
+                      Address
+                    </label>
+                    <input
+                      value={address}
+                      onChange={onChangeAddress}
+                      type="text"
+                      placeholder="address"
                       className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
                     />
                   </div>

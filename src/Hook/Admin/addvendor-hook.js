@@ -16,8 +16,10 @@ const AddvendorHook = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [rolID, setRolID] = useState("");
+  const [stripeID, setStripeID] = useState("string");
   const [banner, setBanner] = useState("");
   const [description, setDescription] = useState("");
+  const [address, setAddress] = useState("");
   const [load, setLoad] = useState(true);
 
   const onChangeName = (e) => {
@@ -45,11 +47,19 @@ const AddvendorHook = () => {
   const onChangeRoleId = (e) => {
     setRolID(e.target.value);
   };
+
+  const onChangeStripeID = (e) => {
+    setStripeID(e.target.value);
+  };
+
   const onChangeBanner = (e) => {
     setBanner(e.target.value);
   };
   const onChangeDescription = (e) => {
     setDescription(e.target.value);
+  };
+  const onChangeAddress = (e) => {
+    setAddress(e.target.value);
   };
 
   const res = useSelector((state) => state.addvendorReducer.addvendor);
@@ -69,6 +79,7 @@ const AddvendorHook = () => {
 
     const data = {
       FName: name,
+      stripeId: stripeID,
       LName: lastName,
       Email: email,
       Password: password,
@@ -78,6 +89,7 @@ const AddvendorHook = () => {
       RoleId: rolID,
       Banner: banner,
       Description: description,
+      Address: address,
     };
 
     console.log(" Form Data Created:", data);
@@ -99,6 +111,8 @@ const AddvendorHook = () => {
     rolID,
     banner,
     description,
+    address,
+    stripeID,
     onChangeName,
     onChangeLastName,
     onChangeEmail,
@@ -110,6 +124,8 @@ const AddvendorHook = () => {
     OnSubmit,
     onChangeBanner,
     onChangeDescription,
+    onChangeAddress,
+    onChangeStripeID,
   ];
 };
 
