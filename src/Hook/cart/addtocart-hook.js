@@ -42,7 +42,7 @@ const AddToCartHook = () => {
           thumbImage: res.data.thumbImage,
           brandId: res.data.brandId,
           categoryId: res.data.categoryId,
-          vendorsIds: res.data.vendors,
+          vendorId: res.data.vendorId,
         });
       }
 
@@ -56,8 +56,9 @@ const AddToCartHook = () => {
         existingShort.qty += 1;
       } else {
         shortCart.push({
-          id: res.data.id,
-          qty: 1,
+          ProductId: res.data.id,
+          vendorId: res.data.vendorId,
+          quantity: 1,
         });
       }
 

@@ -56,7 +56,6 @@ function CheckoutForm({ amount, userId, cartItems }) {
         const orderBody = {
           companyDeliveryId: 1,
           userId,
-          vendorIds: [9],
           currencyName: 0,
           paymentMethod: 0,
           orderAddress: "Aswan,Egypt",
