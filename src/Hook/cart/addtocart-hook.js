@@ -42,6 +42,7 @@ const AddToCartHook = () => {
           thumbImage: res.data.thumbImage,
           brandId: res.data.brandId,
           categoryId: res.data.categoryId,
+          vendorsIds: res.data.vendors,
         });
       }
 

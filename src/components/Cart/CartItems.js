@@ -3,10 +3,11 @@ import ProductCart from "./ProductCart";
 import Breadcrumb from "../Uitily/Breadcrumb";
 import GetAllUserCartHook from "../../Hook/cart/getallcart-hook";
 import CreateOrderHook from "../../Hook/createorder-hook";
-
+import { useNavigate } from "react-router-dom";
 const CartItems = () => {
+  const navigate = useNavigate();
   const [cartItems] = GetAllUserCartHook();
-  const [onSubmit, res] = CreateOrderHook();
+
   const totalPrice = cartItems
     ? cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     : 0;
@@ -66,7 +67,7 @@ const CartItems = () => {
             </div>
 
             <button
-              onClick={onSubmit}
+              onClick={() => navigate("/checkout")}
               className="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition"
             >
               Go to Checkout

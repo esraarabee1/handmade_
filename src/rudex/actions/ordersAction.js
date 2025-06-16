@@ -64,7 +64,9 @@ export const createOrder = (data) => async (dispatch) => {
 
 export const UpdateOrder = (id, data) => async (dispatch) => {
   try {
-    const response = await inUpdateData(`/api/Orders?id=${id}`, data);
+    const response = await inUpdateData(
+      `/api/Orders?id=${id}&OrderStatus=${data}`
+    );
     console.log("order from update order action", response);
 
     dispatch({

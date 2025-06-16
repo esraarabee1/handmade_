@@ -70,9 +70,7 @@ const InventoryItem = () => {
           <div className="flex justify-between">
             <div>
               <p className="text-sm text-gray-500">Price</p>
-              <p className="text-lg font-semibold">
-                ${productdetails.price.toFixed(2)}
-              </p>
+              <p className="text-lg font-semibold">${productdetails.price}</p>
             </div>
             <div className="text-right">
               <p className="text-sm text-gray-500">In-Stock</p>

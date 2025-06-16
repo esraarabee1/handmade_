@@ -37,20 +37,14 @@ const OrderDetail = () => {
 
       {/* Pickup and Drop Information */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <h4 className="text-gray-600 text-sm">Order Address</h4>
           <span className="font-semibold">{res.orderAddress}</span>
-        </div>
+        </div> */}
         <div className="flex flex-col">
           <h4 className="text-gray-600 text-sm">Delivery Company</h4>
           <span className="font-semibold">
             {res.deliveryCompany ? res.deliveryCompany : "Aramex"}
-          </span>
-        </div>
-        <div className="flex flex-col">
-          <h4 className="text-gray-600 text-sm">Transaction</h4>
-          <span className="font-semibold">
-            {res.transactionMoney ? res.transactionMoney : "N/A"}
           </span>
         </div>
       </div>

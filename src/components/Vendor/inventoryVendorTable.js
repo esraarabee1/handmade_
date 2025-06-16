@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import GetOrdersVendorHook from "../../Hook/Vendor/viewordersvendor-hook";
 
 const InventoryVendorTable = () => {
-  const [orders, products] = GetOrdersVendorHook();
+  const [orders, setOrders, products] = GetOrdersVendorHook();
   const navigate = useNavigate();
 
   return (

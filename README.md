@@ -61,11 +61,15 @@ We use **Redux** for centralized state management across the application. This m
 
 ## 📸 Preview
 
-![Header and Home](src/images/home.png)
+![Header and Home](src/images/homepage.png)
 
 ![Section](src/images/cart.png)
 
-![Section](src/images/sales.png)
+![Section](src/images/trackorder.png)
+
+![Section](src/images/proddetails.png)
+
+![Section](src/images/adminanalysis.png)
 
 ![Section](src/images/orders.png)
 

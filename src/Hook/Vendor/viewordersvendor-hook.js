@@ -35,7 +35,7 @@ const GetOrdersVendorHook = () => {
     }
   }, [loading]);
 
-  return [orders, products];
+  return [orders, setOrders, products];
 };
 
 export default GetOrdersVendorHook;

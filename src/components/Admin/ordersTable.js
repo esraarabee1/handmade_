@@ -25,20 +25,7 @@ const OrdersTable = () => {
 
   const handleStatusChange = async (orderId, newStatus) => {
     setIsPress(true);
-    await dispatch(
-      UpdateOrder(orderId, {
-        companyDeliveryId: 1,
-        userId: id || 0,
-        currencyName: 0,
-        paymentMethod: 0,
-        orderAddress: "Aswan,Egypt",
-        subTotal: totalAmount,
-        orderStatus: newStatus,
-        productsOrder: shortCart,
-        createdAt: "2025-03-16T11:56:27.049Z",
-        updatedAt: "2025-03-16T11:56:27.049Z",
-      })
-    );
+    await dispatch(UpdateOrder(orderId, newStatus));
     setIsPress(false);
 
     // update state

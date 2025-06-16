@@ -1,11 +1,13 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CheckoutPage from "./pages/User/CheckoutPage";
 import "./App.css";
 
 // lazy loading
 const HomePage = React.lazy(() => import("./pages/Home/HomePage"));
 const LoginPage = React.lazy(() => import("./pages/Auth/LoginPage"));
 const RegisterPage = React.lazy(() => import("./pages/Auth/RegisterPage"));
+
 const ProductDetailsPage = React.lazy(() =>
   import("./pages/Product/ProductDetailsPage")
 );
@@ -71,6 +73,7 @@ function App() {
         {/* Suspense */}
         <Suspense fallback={<div className="spinner"></div>}>
           <Routes>
+            <Route path="/checkout" element={<CheckoutPage />} />
             <Route index element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
