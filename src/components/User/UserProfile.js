@@ -11,7 +11,9 @@ const UserProfile = () => {
           <div className="flex items-center space-x-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center text-xl font-semibold text-gray-600">
               <img
-                src=""
+                src={`https://ui-avatars.com/api/?name=${
+                  userdata ? userdata.userName : "no data"
+                }&background=random&color=fff`}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />

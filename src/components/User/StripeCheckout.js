@@ -29,13 +29,15 @@ function CheckoutForm({ amount, userId, cartItems }) {
     setLoading(true);
 
     try {
-      const res = await fetch(
-        `https://harfty.runasp.net/api/Orders/Payment?amount=${amount}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+      const res = await fetch("https://harfty.runasp.net/api/Orders/Payment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          amount: amount,
+          companyDeliveryId: 1,
+          products: cartItems,
+        }),
+      });
 
       const { clientSecret } = await res.json();
 
