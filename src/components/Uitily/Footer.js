@@ -6,58 +6,56 @@ import { IoIosCall } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#05ABF3] text-white py-8">
+    <footer className="bg-[#05ABF3] text-white py-10">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <a
-              href="/"
-              className="text-2xl font-semibold flex items-center mb-6"
-            >
+        <div
+          className="flex flex-col md:flex-row flex-wrap gap-10 
+                items-center justify-center text-center 
+                md:items-start md:justify-between md:text-left"
+        >
+          {/* Logo & Contact */}
+          <div className=" flex-1 min-w-[220px]">
+            <a href="/" className="text-2xl font-bold block mb-6">
               Herfety
             </a>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a className="flex items-center gap-2">
-                    <FaWhatsapp className="text-lg" />
-                    <span>
-                      WhatsApp <br /> +1 202-918-2132
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a className="flex items-center gap-2">
-                    <IoIosCall className="text-lg" />
-                    <span>
-                      Call Us <br /> +1 202-918-2132
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul className="space-y-3 text-sm  flex flex-col items-center justify-center md:items-start md:justify-start">
+              <li className="flex  gap-2">
+                <FaWhatsapp className="text-xl mt-1" />
+                <span>
+                  WhatsApp <br /> +1 202-918-2132
+                </span>
+              </li>
+              <li className="flex  gap-2">
+                <IoIosCall className="text-xl mt-1" />
+                <span>
+                  Call Us <br /> +1 202-918-2132
+                </span>
+              </li>
+            </ul>
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold mb-4">Download App</h3>
-            <div className="space-y-4">
+          {/* App Download */}
+          <div className="flex-1 min-w-[220px]">
+            <h3 className="text-lg font-semibold mb-4">Download App</h3>
+            <div className="space-y-4 flex flex-col items-center justify-center md:items-start md:justify-start">
               <img
                 src={app}
                 alt="App Store"
-                className="object-cover rounded-lg w-36 h-12"
+                className="object-contain rounded-lg w-36 h-12"
               />
               <img
                 src={google}
                 alt="Google Play"
-                className="object-cover rounded-lg w-36 h-12"
+                className="object-contain rounded-lg w-36 h-12"
               />
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold mb-4">Categories</h3>
-            <ul className="space-y-2">
+          {/* Categories */}
+          <div className="flex-1 min-w-[220px]">
+            <h3 className="text-lg font-semibold mb-4">Categories</h3>
+            <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:underline">
                   Souvenirs & Keepsakes
@@ -91,9 +89,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold mb-4">Customer Services</h3>
-            <ul className="space-y-2">
+          {/* Customer Services */}
+          <div className="flex-1 min-w-[220px]">
+            <h3 className="text-lg font-semibold mb-4">Customer Services</h3>
+            <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:underline">
                   About Us
@@ -127,7 +126,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <hr className="border-gray-400 my-6" />
+
+        {/* Divider & Copy */}
+        <hr className="border-white/30 my-8" />
         <p className="text-center text-sm">
           © {new Date().getFullYear()} Herfety. All Rights Reserved.
         </p>

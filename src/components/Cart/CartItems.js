@@ -67,7 +67,7 @@ const CartItems = () => {
             </div>
 
             <button
-              onClick={() => navigate("/checkout")}
+              onClick={() => navigate("/user/UserAddress")}
               className="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition"
             >
               Go to Checkout

@@ -17,7 +17,6 @@ const VendorStatus = () => {
     banner,
     description,
     address,
-    stripeID,
     onChangeName,
     onChangeLastName,
     onChangeEmail,
@@ -30,7 +29,6 @@ const VendorStatus = () => {
     onChangeBanner,
     onChangeDescription,
     onChangeAddress,
-    onChangeStripeID,
   ] = AddvendorHook();
   return (
     <div className="rounded-lg ">
@@ -159,7 +157,7 @@ const VendorStatus = () => {
                       className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
                     />
                   </div>
-                  <div>
+                  {/* <div>
                     <label className="block text-xs font-medium text-gray-700">
                       stripe ID
                     </label>
@@ -170,7 +168,7 @@ const VendorStatus = () => {
                       placeholder="stripe ID"
                       className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 text-sm"
                     />
-                  </div>
+                  </div> */}
                   <div>
                     <label className="block text-xs font-medium text-gray-700">
                       Banner

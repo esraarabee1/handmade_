@@ -17,7 +17,7 @@ const user = JSON.parse(localStorage.getItem("user"));
 const id = user?.id || 0;
 const totalAmount = JSON.parse(localStorage.getItem("totalAmount"));
 const shortCart = JSON.parse(localStorage.getItem("shortCart"));
-
+const address = localStorage.getItem("userAddress");
 function CheckoutForm({ amount, userId, cartItems }) {
   const stripe = useStripe();
   const elements = useElements();
@@ -60,7 +60,7 @@ function CheckoutForm({ amount, userId, cartItems }) {
           userId,
           currencyName: 0,
           paymentMethod: 0,
-          orderAddress: "Aswan,Egypt",
+          orderAddress: address,
           subTotal: amount,
           orderStatus: 0,
           productsOrder: cartItems,

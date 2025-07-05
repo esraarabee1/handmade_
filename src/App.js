@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CheckoutPage from "./pages/User/CheckoutPage";
 import "./App.css";
+import UserAddress from "./components/User/UserAddres";
 
 // lazy loading
 const HomePage = React.lazy(() => import("./pages/Home/HomePage"));
@@ -88,6 +89,7 @@ function App() {
               element={<UserWhishlistPage />}
             />
             <Route path="/user/UserProfilePage" element={<UserProfilePage />} />
+            <Route path="/user/UserAddress" element={<UserAddress />} />
             <Route
               path="/user/UserTrackOrderPage"
               element={<UserTrackOrderPage />}

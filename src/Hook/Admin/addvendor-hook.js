@@ -16,7 +16,7 @@ const AddvendorHook = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [rolID, setRolID] = useState("");
-  const [stripeID, setStripeID] = useState("string");
+  // const [stripeID, setStripeID] = useState("string");
   const [banner, setBanner] = useState("");
   const [description, setDescription] = useState("");
   const [address, setAddress] = useState("");
@@ -48,9 +48,9 @@ const AddvendorHook = () => {
     setRolID(e.target.value);
   };
 
-  const onChangeStripeID = (e) => {
-    setStripeID(e.target.value);
-  };
+  // const onChangeStripeID = (e) => {
+  //   setStripeID(e.target.value);
+  // };
 
   const onChangeBanner = (e) => {
     setBanner(e.target.value);
@@ -79,7 +79,7 @@ const AddvendorHook = () => {
 
     const data = {
       FName: name,
-      stripeId: stripeID,
+
       LName: lastName,
       Email: email,
       Password: password,
@@ -112,7 +112,7 @@ const AddvendorHook = () => {
     banner,
     description,
     address,
-    stripeID,
+
     onChangeName,
     onChangeLastName,
     onChangeEmail,
@@ -125,7 +125,6 @@ const AddvendorHook = () => {
     onChangeBanner,
     onChangeDescription,
     onChangeAddress,
-    onChangeStripeID,
   ];
 };
 
